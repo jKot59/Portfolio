@@ -1,0 +1,29 @@
+@import 'style640main';
+footer{
+    display: flex;
+    height: calc(108 * (100vw / 640));
+    justify-content: center;
+    div:first-child{
+        display: flex;
+        width: 50%;
+        align-items: center;
+        padding-left: 4.7%;
+    }
+    .text{
+        display: flex;
+        align-items: center;
+        width: 50%;
+        color: $whcol;
+        text-align: right;
+        justify-content: flex-end;
+        font-size: calc(24 * (100vw / 640));
+        color: #8d8d8d;
+        padding-right: 4.7%;
+    }
+    img{
+        @include adheight(30);
+    }
+}
+.footContent{
+    display: none;
+}

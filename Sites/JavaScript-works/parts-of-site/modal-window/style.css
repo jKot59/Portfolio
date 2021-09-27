@@ -1,0 +1,61 @@
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    text-align: center;
+}
+input {
+    margin-bottom: 10px;
+    height: 20px;
+}
+#btnSubmit {
+    margin-top: 10px;
+    height: 30px;
+
+}
+.modal {
+    display: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 230px;
+    background: teal;
+}
+h2 {
+    margin: 5px 0 10px 0;
+}
+#closeModal {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: red;
+    cursor: pointer;
+}
+
+#closeModal::after {
+    position: absolute;
+    content: '';
+    left: 13px;
+    top: 2px;
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+    transform: rotate(45deg);
+}
+#closeModal::before {
+    position: absolute;
+    content: '';
+    left: 13px;
+    top: 2px;
+    height: 20px;
+    width: 2px;
+    background-color: #333;
+    transform: rotate(-45deg);
+}
+.show {
+    display:flex;
+}

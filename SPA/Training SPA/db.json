@@ -1,0 +1,19 @@
+{
+    "data": [
+        {"name": "workTree", "value": false, "id": "workTree"},
+        {"name": "aboutMe", "value": false, "id": "aboutMe"},
+        {"name": "contacts", "value": false, "id": "contacts"}
+    ],
+    "works": [
+        {"name": "First-work", "id": "firstWork", "description": "It is my first site. I did it on pure html and css with response.", "date": "January 8 2021"},
+        {"name": "aLook-shop", "id": "lookShop", "description": "The look shop is my second work with using scss and pure JS. Here i started use BEM.", "date": "May 9 2021"},
+        {"name": "bWork-js", "id": "workJs", "description": "Inside folder work js i did all practice with a framework vanila JS :)", "date": "April 8 2021"}
+    ],
+    "aboutMe": {
+        "title": "Обо мне", "id": "aboutMe", "subtitle": {"age": "Возраст : 27 лет", "activity": "Деятельность : Учу JS", "hobby": "Хобби: программирование", "stack" : "Развиваюсь в : HTML, CSS, JS, React, Redux"}
+    },
+    "contacts": {
+        "name": "contacts", "id": "contacts", "phone": "+7-952-***-94-91", "Email": "5Val994@mail.ru", "city": "Челябинск"
+    },
+    "activeFilter": ["alphabet"]
+}

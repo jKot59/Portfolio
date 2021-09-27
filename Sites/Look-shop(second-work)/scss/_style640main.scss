@@ -1,0 +1,307 @@
+@import "style640header";
+@font-face {
+    font-family: "Helvetica Heue";
+    src: url(../fonts/HelveticaNeueLTStd-Lt.otf);
+}
+
+main {
+    width: 100%;
+
+    @include adheight(1808);
+
+    @extend %flexc;
+}
+
+.email {
+    display: flex;
+    width: 95.3%;
+    margin: 0 auto;
+    margin-bottom: calc(25 * (100vw / 640));
+
+    > div:first-child {
+        display: flex;
+
+        @include adheight(96);
+
+        background-color: #ededed;
+        width: 80.3 / 95.3 * 100%;
+    }
+
+    form {
+        width: 100%;
+        height: 100%;
+        label{
+            display: none;
+        }
+    }
+
+    input {
+        width: 100%;
+        height: 100%;
+        background-color: #ededed;
+        border: none;
+        padding-left: 4.7 / 95.3 * 100%;
+
+        @include adfont(15);
+
+        &::placeholder {
+            color: #9f9f9f;
+            font: italic #{$fs + px} Arial, sans-serif;
+            letter-spacing: $ls;
+
+            @include adfont(15);
+        }
+    }
+
+    .plus {
+        @include adheight(96);
+        border: none;
+        width: 15 / 95.3 * 100%;
+        background-color: $mencol;
+
+        // border-bottom: calc(8 *(100vw / 640)) solid #dd6b44;
+        box-shadow: inset 0 calc(-8 *(100vw / 640)) #dd6b44;
+        display: flex;
+
+        @extend %flexc;
+
+        img {
+            @include adheight(37);
+        }
+    }
+}
+
+.find {
+    width: 95.3%;
+    margin: 0 auto;
+
+    @include adheight(88);
+
+    background-color: white;
+    margin-bottom: calc(25 * (100vw / 640));
+}
+
+.finduh {
+    display: flex;
+    height: 100%;
+
+    @extend %flexc;
+
+    div:first-child {
+        width: 40.3 / 95.3 * 100%;
+        letter-spacing: $ls;
+        padding-left: 4.7 / 95.3 * 100%;
+        font-size: calc(11px + (15 + 15 * 0.7) * ((100vw - 240px)/ 640));
+        color: #6c6c6c;
+    }
+
+    a:nth-child(2), a:nth-child(3), a:nth-child(4) {
+        display: flex;
+
+        @extend %flexc;
+
+        width: 13.9 / 95.3 * 100%;
+        height: 100%;
+    }
+
+    a:nth-child(2) {
+        background-color: #f7f7f7;
+
+        img {
+            @include adheight(30);
+        }
+    }
+
+    a:nth-child(3) {
+        background-color: #ededed;
+
+        img {
+            @include adheight(28);
+        }
+    }
+
+    a:nth-child(4) {
+        margin-right: 13.4 / 95.3 * 100%;
+        background-color: #f7f7f7;
+
+        img {
+            @include adheight(35);
+        }
+    }
+}
+.collage{
+    display: none;
+}
+.whatIsHot {
+    display: flex;
+
+    @include adheight(763);
+
+    background-color: $mencol;
+    article {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: calc(88 * (100vw / 640)) calc(556 * (100vw / 640)) calc(119 * (100vw / 640));
+        width: 100%;
+    
+    }
+}
+
+.mainBar {
+    grid-column: span 2;
+    display: flex;
+    width: 100%;
+
+
+    background-color: #f4845d;
+    text-transform: uppercase;
+    letter-spacing: $ls;
+    color: $whcol;
+    text-align: left;
+    padding-left: 4.7%;
+    align-items: center;
+    div:first-child{
+        display: flex;
+        width: 50%;
+        @include adheight(88);
+        @include adfont(15);
+        align-items: center;
+    }
+    div:last-child{
+        width: 50%;
+        text-align: right;
+        padding-right: 4.7%;
+        img{
+            @include adheight(10);
+        }
+    }
+}
+.product{
+    display: flex;
+    grid-column: span 2;
+    .item1, .item2{
+        padding-top: calc(5 * (100vw / 640));
+        display: flex;
+        flex-direction: column;
+        width: 43%;
+        background-color: #fff;
+        margin-left: 4.7%;
+        margin-right: 2.5%;
+        margin-top: calc(33 * (100vw / 640));
+        @include adheight(523);
+        justify-content: flex-end;
+    }
+    .item0, .item4, .item5{
+        display: none;
+    }
+    .item2{
+        margin-left: 2.5%;
+        margin-right: 4.7%;
+
+    }
+    img{
+        @include adheight(357);
+    }
+
+.info{
+    display: flex;
+    flex-direction: column;
+    @include adheight(162);
+    background-color: #f7f7f7;
+    justify-content: flex-end;
+
+
+}
+}
+.name{
+    display: flex;
+    color: #373737;
+    font-size: calc(18 * (100vw / 640));
+    letter-spacing: -0.18px;
+    @include adheight(40);
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.price{
+    font-size: calc(27.49 * (100vw / 640));
+    letter-spacing: -0.2749px;
+}
+.cart{
+    @include adheight(60);
+    width: 34.4 / 43 * 100%;
+    background-color: $mencol;
+    border: none;
+    border-bottom: 7px solid #dd6b44;
+    font-family: "Helvetica Heue";
+    font-size: calc(20 * (100vw / 640));
+    text-transform: uppercase;
+    color: $whcol;
+    padding: 0;
+    margin-bottom: calc(22 * (100vw / 640));
+    margin-top: calc(10 * (100vw /640));
+    background: #fd926d url(../images/plus-small.png) no-repeat center right;
+    background-position-x: calc((31.3 / 34.4)* 100%);
+    background-size: calc(17 * (100vw / 640));
+    text-align: left;
+    padding-left: calc((4.5 / 34.4) * 100%);
+    img{
+        @include adheight(17);
+    }
+}
+.load{
+    display: flex;
+    grid-column: span 2;
+    @extend %flexc;
+    width: 100%;
+    button{
+        width: 34.4%;
+        @include adheight(60);
+        background-color: #000;
+        border: none;
+        color: #dddddd;
+        text-transform: uppercase;
+        font-size: calc(20 * (100vw / 640));
+        font-family: "Helvetica Heue";
+    }
+}
+img[alt="bag1"]{
+    @include adheight(324);
+    object-fit: contain;
+    margin-bottom: calc(30 * (100vw / 640));
+}
+img[alt="bag2"]{
+    margin-top: calc(44 * (100vw / 640));
+    @include adheight(280);
+    object-fit: contain;
+    margin-bottom: calc(30 * (100vw / 640));
+
+}
+img[alt="clerance"]{
+    @include adheight(157);
+    position: absolute;
+    top: calc(23 * (100vw / 640));
+    left: -25%;
+}
+.whatIsHot768{
+    display: none;
+}
+.clerance{
+    position: relative;
+    @include adheight(811);
+    overflow: hidden;
+    article {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: calc(556 * (100vw / 640)) calc(125 * (100vw / 640));
+        width: 100%;
+        padding-top: calc(121 * (100vw / 640));
+    
+    }
+}
+.clerance768{
+    display: none;
+}
+.mainFooter{
+    display: none;
+}

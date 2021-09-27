@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+.tabWindow {
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-template-rows: 50px 250px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    
+}
+
+.tabWindow__button {
+    border: 1px solid black;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    user-select: none;
+    text-transform: uppercase;
+    transition: .5s;
+}
+
+.tabWindow__item {
+    grid-column: span 5;
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

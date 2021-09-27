@@ -1,0 +1,491 @@
+$bgfa: #fafafa;
+$fc: #838383;
+$mencol: #fd926d;
+$whcol: #fff;
+$itembgc: #fafafa;
+$fs: 30; //added font-size without px dimention
+$ls-5: -5 * 30 / 1000 * 1px;
+$header-height: 23.8;
+$maxWidth: 1200;
+$headerHeight: 651;
+$mainHeight: 1932;
+$footerHeight: 317;
+$blackRowHeight: 30;
+$logoRowHeight: 106;
+$menuRowHeight: 440;
+$sliderRowHeight: 75;
+$pointsRowHeight: 0;
+
+%flexc {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin adfont($min, $max) {
+    $sub: $max - $min;
+
+    font-size: calc(#{$min + px} + #{$sub + $sub * 0.7} * ((100vw - 769px) / #{$maxWidth}));
+}
+
+@mixin adheight($dim) {
+    height: calc(#{$dim} * (100vw / #{$maxWidth}));
+}
+@mixin adheightR($dim) {
+    height: calc(#{$dim} * (#{$maxWidth} / 100vw));
+}
+
+@mixin fontSize($par){
+    font-size: calc(#{$par} * (100vw / #{$maxWidth}));
+}
+@mixin gridTrow ($firstRow, $secondRow, $thirdRow, $fourthRow, $fifthRow){
+    grid-template-rows: calc(#{$firstRow} * (100vw / #{$maxWidth}))
+    calc(#{$secondRow} * (100vw / #{$maxWidth}))
+    calc(#{$thirdRow} * (100vw / #{$maxWidth}))
+    calc(#{$fourthRow} * (100vw / #{$maxWidth}))
+    calc(#{$fifthRow} * (100vw / #{$maxWidth}));
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.box {
+    display: grid;
+    max-width: 1200px;
+    grid-auto-rows: 651px 1932px 317px;
+    grid-template-areas: 'header' 'main' 'footer';
+    height: 100%;
+    margin: 0 auto;
+}
+
+header {
+    
+    height: 100%;
+    width: 100%;
+    grid-area: header;
+}
+
+
+
+
+.container {
+    display: grid;
+    grid-template-rows: 30px 106px 
+    440px 75px calc(#{$pointsRowHeight} * (100vw / #{$maxWidth}));
+    grid-template-columns: 25% 25% 20.9% 29.1%;
+    height: 100%;
+
+    > div:first-child {
+        display: flex;
+        grid-column: span 2;
+        background-color: $bgfa;
+        color: $fc  ;
+        text-transform: uppercase;
+        letter-spacing: $ls-5;
+        line-height: normal;
+        background-color: #000;
+        font-size: 11px;
+        color: $whcol;
+        padding-left: 9.5 / 50 * 100%;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+    }
+}
+
+.myacc {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    color: $whcol;
+    @extend %flexc;
+    text-transform: uppercase;
+    justify-content: flex-end;
+    padding-right: 9.6 / 50 * 100%;
+    select{
+        height: 100%;
+        width: 70px;
+        background: #000 url(../images/768/triangle.png) no-repeat center left;
+        background-position-x: 50px;
+        text-indent: 15px;
+        color: #fff;
+        border: none;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        text-align: center;
+        border-left: 1px solid #444444;
+        border-right: 1px solid #444444;
+        cursor: pointer;
+        &:hover{
+            color: $mencol;
+        }
+        option{
+            color: #fff;
+            margin-left: 15px;
+        }
+    }
+
+    a:nth-child(2) {
+        display: flex;
+        // width: 10.5 / (50 - 9.6) * 100%;
+        width: 128px;
+        height: 100%;
+        font-size: 11px;
+        letter-spacing: $ls-5;
+        @extend %flexc;
+        border-right: 1px solid #444444;
+        text-decoration: none;
+        color: #fff;
+        &:visited{
+            color: #fff;
+        }
+        &:hover{
+            color: $mencol;
+        }
+        img {
+            margin-right: 3 / 60 * 100%;
+            height: 15px;
+        }
+    }
+
+    div:nth-child(3) {
+        display: flex;
+        height: 100%;
+        // width: 3 / (50 - 9.6) * 100%;
+        width: 35px;
+        border-right: 1px solid #444444;
+        align-items: center;
+        justify-content: center;
+        img {
+            height: 15px;
+        }
+    }
+
+    button {
+        height: 100%;
+        // width: 6 / (50 - 9.6) * 100%;
+        width: 72px;
+        background-color: transparent;
+        color: $whcol;
+        border: none;
+        letter-spacing: $ls-5;
+        border-left: 1px solid #444444;
+        border-right: 1px solid #444444;
+        font-size: 11px;
+    }
+}
+
+.logo {
+    display: none;
+    grid-column: 1/2;
+    width: 100%;
+
+    @include adheight(108);
+
+    background-color: white;
+    font: bold calc(94.14 * (100vw / 640)) "Trebuchet MS", sans-serif;
+    letter-spacing: -2.3px;
+
+    @extend %flexc;
+
+    img {
+        position: relative;
+        top: 5%;
+        height: calc(50 * (100vw / 640));
+    }
+}
+
+.logo2{
+    display: flex;
+    margin-left: 9.5 / 25 * 100%;
+    align-items: center;
+}
+nav{
+    display: flex;
+    position: relative;
+    align-items: center;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    letter-spacing: $ls-5;
+    justify-content: flex-end;
+    a:link{
+        text-decoration: none;
+        @include adfont(15, 16);
+        color:#7a706d;
+    }
+    a:visited{
+        text-decoration: none;
+        @include adfont(15, 16);
+        color:#7a706d;
+    }
+    a:hover{
+        color: $mencol;
+    }
+    >ul{
+        width: 36.5/ 50 * 100%;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        padding-left: 0;
+        justify-content: space-between;
+
+
+    }
+    li{
+        position: relative;
+        @include adfont(15, 16);
+        ul{
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            list-style-type: none;
+            padding-left: 0;
+            padding: 10px;
+            background-color: #fff;
+            top: 100%;
+            left: 50%;
+            width: fit-content;
+            border: 1px solid #d6d6d6;
+            text-align: center;
+            border-radius: 0 0 5px 5px;
+            border-top: none;
+            transform: translate(-50%, 20px);
+            z-index: 100;
+        }
+        &:hover ul{
+            visibility:visible;
+            opacity: 1;
+            transform: translate(-50%, 0);
+            transition-duration: .3s;
+        }
+        li{
+            padding: 5px 0;
+        }
+    }
+}
+.handband {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: flex-end;
+    color: #949393;
+
+
+    .yourCart{
+        width: 17.8 / 29.1 * 100%;
+        border-bottom: none;
+        order: 1;
+        background-color: #fff;
+        div:first-child {
+            width: 50%;
+            text-align: left;
+            padding-left: 1.3 / 28.2 * 100%;
+        }
+        div:last-child {
+            width: 50%;
+            text-align: right;
+            padding-right: 1.3 / 28.2 * 100%;
+        }
+        img{
+            height: 4px;
+        }
+
+    }
+
+    & > div {
+        margin-right: 9.6 / 29.1 * 100%;
+        width: 17.8 / 29.1 * 100%;
+        order: 2;
+        display: flex;
+        @extend %flexc;
+        height: 33px;
+        border: thin solid #d6d6d6;
+        background-color: $itembgc;
+
+        div:first-child {
+            width: 47.7 / 56.4 * 100%;
+            text-align: left;
+            padding-left: 1.3 / 28.2 * 100%;
+        }
+        
+        div:nth-child(2) {
+            width: 33.3 / 56.4 * 100%;
+            font-size: 11px;
+            letter-spacing: $ls-5;
+            text-transform: uppercase;
+            text-align: right;
+        }
+
+        div:nth-child(3) {
+            width: 14.4 / 56.4 * 100%;
+
+            font-size: 11px;
+
+            letter-spacing: $ls-5;
+            color: #949393;
+            padding-right: 1.3 / 28.2 * 100%;
+            text-align: end;
+        }
+
+        img {
+            height: 19px;
+        }
+        
+    }
+}
+
+.menu {
+    display: none;
+    @include adheight(48);
+    grid-column: span 2;
+    width: 95.3%;
+
+    @extend %flexc;
+
+    margin: 0 auto;
+    background-color: $mencol;
+
+    & > div {
+        display: flex;
+
+        @extend %flexc;
+
+        margin: 0 auto;
+        height: 100%;
+
+        div:first-child {
+            width: 47.7 / 95.3 * 100%;
+            text-align: left;
+            padding-left: 2.2 / 95.3 * 100%;
+            color: $whcol;
+
+            @include fontSize(18);
+
+            letter-spacing: $ls-5;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        div:last-child {
+            width: 47.7 / 95.3 * 100%;
+            letter-spacing: $ls-5;
+            color: #949393;
+            padding-right: 2.2 / 95.3 * 100%;
+            text-align: right;
+        }
+
+        img {
+            @include adheight(20);
+        }
+    }
+}
+
+.slider{
+    display: none;
+    position: relative;
+    width: 100%;
+    grid-column: span 4;
+    >img[alt="slide"]{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+    >img[alt="rowL"]{
+        @include adheight(117);
+        position: absolute;
+        top: calc(122 * (100vw / #{$maxWidth}));
+        left: 0;
+    }
+    >img[alt="rowR"]{
+        @include adheight(117);
+        position: absolute;
+        top: calc(122 * (100vw / #{$maxWidth}));
+        right: 0;
+    }
+    .shopNow{
+        position: absolute;
+        top: 2.1 / 12.1 * 100%;
+        left: calc(77 * (100vw / 768)) ;
+        >img{
+            @include adheight(235);
+        }
+    }
+}
+.slider-2{
+    position: relative;
+    width: 100%;
+    grid-column: span 4;
+    >img[alt="slide"]{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+
+    }
+    >.rowL{
+        height: 117px;
+        position: absolute;
+        top: 161.5px;
+        left: 0;
+        border: none;
+        height: 117px;
+        width: 30px;
+        padding: 0;
+        cursor: pointer;
+        background: #fff;
+        
+        &:active{
+            background: $mencol;
+            img{
+                opacity: .6;
+            }
+        }
+    }
+    
+    >.rowR{
+        height: 117px;
+        position: absolute;
+        top: 161.5px;
+        right: 0;
+        border: none;
+        height: 117px;
+        width: 30px;
+        padding: 0;
+        cursor: pointer;
+        &:active{
+            background: $mencol;
+            img{
+                opacity: .6;
+            }
+        }
+    }
+    .shopNow{
+        position: absolute;
+        top: 2.1 / 12.1 * 100%;
+        right: 56.3%;
+    }
+}
+.slideNav{
+    display: flex;
+    grid-column: span 4;
+    @extend %flexc;
+}
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #ededed;
+}

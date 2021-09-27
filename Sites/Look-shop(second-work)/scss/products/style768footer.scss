@@ -1,0 +1,124 @@
+@import "style768main";
+
+footer {
+    > div:first-child {
+        display: none;
+    }
+}
+.text{
+    display: none;
+}
+
+.footContent {
+    display: grid;
+
+    @include gridTrow(58, 347, 74, 0, 0);
+    a:link{
+        text-decoration: none;
+        color: #8d8d8d;
+        letter-spacing: 0;
+        line-height: calc(18 * (100vw / 768));
+        @include fontSize(12);
+            }
+    a:visited{
+        color: #544f4d;
+    }
+    a:hover{
+        color: $mencol;
+        transition-duration: 0.5s;
+    }
+}
+
+.accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    img{
+        @include adheight(22);
+    }
+    span {
+        margin-right: 10px;
+        color: #ababab;
+
+        @include fontSize(12);
+
+        letter-spacing: -0.12px;
+    }
+}
+
+.foot_menu {
+    display: grid;
+    grid-template-columns: 26.4 /96 * 100% 26.8 / 96 * 100% 21.7 / 96 * 100% 21.1 / 96 * 100%;
+    grid-template-rows: 50% 50%;
+    background-color: #ededed;
+    padding-left: 2%;
+    margin-top: 2%;
+    padding-right: 2%;
+    h2{
+        @include fontSize(16);
+        color: #544f4d;
+    }
+    >div{
+        display: flex;
+        flex-direction: column;
+    }
+    .social{
+        >div{
+            display: grid;
+            grid-template-columns: repeat(3, 34px);
+            grid-template-rows: repeat(2, 35px);
+            grid-gap: calc(10 * (100vw / 768));
+            margin-top: 5px;
+            img{
+                @include adheight(34);
+            }
+        }
+        
+    }
+}
+.lfoot{
+    display: flex;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    >div:first-child{
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        margin-left: 2%;
+        div{
+            border-right: 1px solid #544f4d;
+            padding-left: 2%;
+            padding-right: 2%;
+            height: fit-content;
+            @include fontSize(11);
+            line-height: 20px;
+        }
+        >div:first-child{
+            padding-left: 0;
+        }
+        >div:last-child{
+            border-right: none;
+        }
+    }
+    >div:last-child{
+        display: flex;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        height: 100%;
+        align-items: center;
+        margin-right: 2%;
+        color: #8d8d8d;
+        @include fontSize(11);
+        line-height: 18px;
+    }
+}
+.oneh{
+    align-items: center;
+    justify-content: center;
+    img{
+        @include adheight(107);
+    }
+}

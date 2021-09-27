@@ -1,0 +1,274 @@
+$bgfa: #fafafa;
+$fc: #838383;
+$fs: 30; //added font-size without px dimention
+$ls: -5 * 30 / 1000 * 1px;
+$header-height: 23.8;
+$mencol: #fd926d;
+$maxWidth: 640;
+$whcol: #fff;
+
+%flexc {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin adfont($min) {
+    $sub: $fs - $min;
+
+    font-size: calc(#{$min + px} + #{$sub + $sub * 0.7} * ((100vw - 240px) / #{$maxWidth}));
+}
+
+@mixin adheight($dim) {
+    height: calc(#{$dim} * (100vw / 640));
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 2.3%) repeat(2, 43%) repeat(3, 2.3%);
+    grid-auto-rows: calc(633 * (100vw / 640)) calc(1808 * (100vw / 640)) calc(108 * (100vw / 640));
+    grid-template-areas: 'header header header header header header header header' 'main main main main main main main main' 'footer footer footer footer footer footer footer footer';
+    height: 100%;
+}
+
+header {
+    height: 100%;
+    width: 100%;
+    grid-area: header;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    > div:first-child {
+        display: flex;
+
+        @include adheight(97);
+
+        background-color: $bgfa;
+
+        @include adfont(15);
+
+        color: $fc  ;
+        text-transform: uppercase;
+
+        @extend %flexc;
+
+        letter-spacing: $ls;
+        line-height: normal;
+    }
+}
+
+.myacc {
+    display: flex;
+    flex-direction: row;
+
+    @include adheight(97);
+
+    background-color: black;
+    color: $whcol;
+    @extend %flexc;
+    text-transform: uppercase;
+    a{
+        text-decoration: none;
+    }
+    a:nth-child(2) {
+        display: flex;
+        width: 60%;
+        height: 100%;
+        @include adfont(15);
+        letter-spacing: $ls;
+        border-left: 2px solid #444;
+        border-right: 2px solid #444;
+        @extend %flexc;
+        img {
+            margin-right: 3 / 60 * 100%;
+            width: calc(40 *(100vw /640));
+        }
+    }
+    select {
+        height: 100%;
+        width: 24%;
+        background: #000 url(../images/Rectangle22.png) no-repeat center left;
+        background-position-x: calc(20 / 24 * 100%);
+        background-size: calc(20 * (100vw / 640)) calc(10 * (100vw / 640));
+        text-indent: calc(4.2 / 24 * 100%);
+        color: #fff;
+        border: none;
+        appearance: none;
+        text-align: center;
+        cursor: pointer;
+        @include adfont(11);
+        option {
+            color: #fff;
+            font-size: calc(11px + 32.3 * ((100vw - 240px) / 640));
+            
+        }
+    }
+    a:nth-child(2):visited {
+        color: #fff;
+    }
+    div:nth-child(3) {
+        display: flex;
+        width: 16%;
+        text-align: right;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: calc(38 *(100vw /640));
+        }
+    }
+
+    }
+.logo2 {
+    display: none;
+}
+nav{
+    display: none;
+}
+.logo {
+    display: flex;
+    width: 100%;
+
+    // height: 7.8 / $header-height * 100%;
+    @include adheight(200);
+
+    background-color: white;
+    font: bold calc(94.14 * (100vw / 640)) "Trebuchet MS", sans-serif;
+    letter-spacing: -2.3px;
+
+    @extend %flexc;
+
+    img {
+        position: relative;
+        top: 5%;
+        height: calc(50 * (100vw / 640));
+    }
+}
+
+.handband {
+    width: 95.3%;
+
+    // height: 3.8 / $header-height * 100%;
+    @include adheight(96);
+
+    background-color: $bgfa;
+    margin: 0 auto;
+    margin-bottom: 0.9 / $header-height * 100%;
+
+    .yourCart {
+        display: none;
+    }
+
+    & > div {
+        display: flex;
+
+        @extend %flexc;
+
+        margin: 0 auto;
+        height: 100%;
+        border: thin solid #d6d6d6;
+
+        div:first-child {
+            width: 47.7 / 95.3 * 100%;
+            text-align: left;
+            padding-left: 4.7 / 95.3 * 100%;
+        }
+
+        div:nth-child(2) {
+            width: 33.3 / 95.3 * 100%;
+
+            @include adfont(15);
+
+            letter-spacing: $ls;
+            text-transform: uppercase;
+            color: #949393;
+            text-align: right;
+        }
+
+        div:nth-child(3) {
+            width: 14.4 / 95.3 * 100%;
+
+            @include adfont(15);
+
+            letter-spacing: $ls;
+            color: #949393;
+            padding-right: 4.7 / 95.3 * 100%;
+            text-align: end;
+        }
+
+        img {
+            height: calc(49 * (100vw / 640));
+        }
+    }
+}
+
+.menu {
+    @include adheight(96);
+
+    width: 95.3%;
+
+    @extend %flexc;
+
+    margin: 0 auto;
+    background-color: $mencol;
+    margin-bottom: 1 / $header-height * 100%;
+
+    & > div {
+        display: flex;
+
+        @extend %flexc;
+
+        margin: 0 auto;
+        height: 100%;
+
+        div:first-child {
+            width: 47.7 / 95.3 * 100%;
+            text-align: left;
+            padding-left: 4.7 / 95.3 * 100%;
+            color: $whcol;
+
+            @include adfont(15);
+
+            letter-spacing: $ls;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        div:last-child {
+            width: 47.7 / 95.3 * 100%;
+            letter-spacing: $ls;
+            color: #949393;
+            padding-right: 4.7 / 95.3 * 100%;
+            text-align: right;
+        }
+
+        img {
+            @include adheight(30);
+        }
+    }
+}
+.slider, .slideNav, .slider-2{
+    display: none;
+}
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #000;
+}

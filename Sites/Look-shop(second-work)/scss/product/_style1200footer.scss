@@ -1,0 +1,155 @@
+@import 'style1200main';
+
+footer {
+    >div:first-child {
+        display: none;
+    }
+}
+
+.text {
+    display: none;
+}
+
+.footContent {
+    display: grid;
+    grid-template-rows: 58px 200px 74px;
+
+    a:link {
+        text-decoration: none;
+        color: #8d8d8d;
+        letter-spacing: 0;
+        line-height: 18px;
+        font-size: 12px;
+    }
+
+    a:visited {
+        color: #544f4d;
+    }
+
+    a:hover {
+        color: $mencol;
+        transition-duration: 0.5s;
+    }
+}
+
+.accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+
+    img {
+        height: 22px;
+    }
+
+    span {
+        margin-right: 10px;
+        color: #ababab;
+
+        font-size: 12px;
+
+        letter-spacing: -0.12px;
+    }
+}
+
+.foot_menu {
+    display: grid;
+    height: 180px;
+    grid-template-columns: 203px 162px 192px 113px 190px 108px;
+    background-color: #ededed;
+    margin: 0 auto;
+    margin-top: 20px;
+
+    h2 {
+        font-size: 16px;
+        color: #544f4d;
+    }
+
+    >div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div:nth-child(5) {
+        grid-column: 3;
+        grid-row: 1;
+    }
+    div:nth-child(6) {
+        grid-column: 4;
+        grid-row: 1;
+    }
+    div:nth-child(7), div:nth-child(8) {
+        display: none;
+    }
+
+    .social {
+        grid-column: 5;
+
+        >div {
+            display: grid;
+            grid-template-columns: repeat(3, 34px);
+            grid-template-rows: repeat(2, 35px);
+            grid-gap: 10px;
+            margin-top: 5px;
+
+            img {
+                height: 34px;
+            }
+        }
+
+    }
+}
+
+.lfoot {
+    display: flex;
+    position: relative;
+    background-color: #000;
+    color: #fff;
+
+    >div:first-child {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        margin-left: 115px;
+
+        div {
+            border-right: 1px solid #544f4d;
+            padding-left: 2%;
+            padding-right: 2%;
+            height: fit-content;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        >div:first-child {
+            padding-left: 0;
+        }
+
+        >div:last-child {
+            border-right: none;
+        }
+    }
+
+    >div:last-child {
+        display: flex;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        height: 100%;
+        align-items: center;
+        margin-right: 115px;
+        color: #8d8d8d;
+        font-size: 11px;
+        line-height: 18px;
+    }
+}
+
+.oneh {
+    grid-column: 6;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 107px;
+    }
+}
