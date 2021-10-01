@@ -1,4 +1,4 @@
-WordPress is easy made with pure html and css.
+Site WordPress-is-easy uses pure html and css.
 
 The look shop is my second work where i started use scss. Later i wanted rework it with using BEM and JavaScript. BEM and JS were applied to the slider and the menu 'CATEGORIES' in a page products.html
 
