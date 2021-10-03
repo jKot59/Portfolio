@@ -11,6 +11,6 @@ August(~160h) | September(~115h) |
 <img width="300" alt="portfolio_view" src="https://sun9-86.userapi.com/impg/ZsbaBbdbsxHOU4TNUzQ1fiGUDN8Q3IRgcWYy9w/C_Sq8nqVaEw.jpg?size=693x1080&quality=96&sign=bbd435f159ee1862ab2ccd29aaac8ac2&type=album"> | <img width="300" alt="portfolio_view" src="https://sun9-57.userapi.com/impg/IAy-gKlA_U9_45NhQdsewPVkGi_0cRwJf1n2PQ/J8RIoB2JsM8.jpg?size=815x1080&quality=96&sign=ff3237869e66cf3f5adfa85b8a362ad8&type=album"> | <img width="300" alt="portfolio_view" src="https://www.pngitem.com/pimgs/m/73-732795_transparent-shaking-hands-png-transparent-shake-hand-logo.png">
 
 
-P.S. Total learning time about 750 hours :slightly_smiling_face:
+P.S. Total learning time about 900 hours :slightly_smiling_face:
 
 Also i have an account on codewars.com. Here you are https://www.codewars.com/users/jKot59
