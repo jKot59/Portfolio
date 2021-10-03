@@ -182,8 +182,9 @@ nav {
 }
 
 .causes_eclipse {
+    display: flex;
+    align-items: center;
     margin: 10px auto 0 auto;
-    padding-top: 25px;
     width: 113px;
     height: 113px;
     border-radius: 100%;
@@ -191,7 +192,6 @@ nav {
 }
 
 .causes_eclipse .causes_icon-wallet {
-    display: block;
     margin: 0 19px 0 14px;
 }
 
@@ -199,6 +199,30 @@ nav {
 
 .causes_eclipse .causes_icon-graph {
     margin: 0 24px 0 25px;
+}
+
+.causes_eclipse .causes_icon-cash {
+    margin: 0 13px 0 17px;
+}
+
+.causes_eclipse .causes_icon-calendar {
+    margin: 0 18px 0 16px;
+}
+
+.causes_eclipse .causes_icon-key {
+    margin: 0 28px 0 31px;
+}
+
+.causes_eclipse .causes_icon-gps {
+    margin: 0 26px 0 24px;
+}
+
+.causes_eclipse .causes_icon-support {
+    margin: 0 auto;
+}
+
+.causes_eclipse .causes_icon-car {
+    margin: 0 23px 0 17px;
 }
 
 .causes .causes_title {
@@ -215,4 +239,8 @@ nav {
     font-weight: 300;
     line-height: 21px;
     text-align: justify;
+}
+
+.causes .row {
+    margin-top: 35px;
 }
