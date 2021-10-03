@@ -70,7 +70,6 @@ nav {
     display: block;
     margin-top: 6px;
     color: #ffffff;
-    font-family: Roboto;
     font-size: 22px;
     font-weight: 400;
     text-align: right;
@@ -98,7 +97,7 @@ nav {
 
 .promo {
     min-height: 800px;
-    background: url('/src/img/first_bg.jpg') center center /cover no-repeat;
+    background: url('../img/first_bg.jpg') center center /cover no-repeat;
     padding: 150px 0 135px 0;
 }
 
@@ -142,7 +141,6 @@ nav {
 
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21);
     color: #ffffff;
-    font-family: Roboto;
     font-size: 18px;
     font-weight: 400;
     font-style: normal;

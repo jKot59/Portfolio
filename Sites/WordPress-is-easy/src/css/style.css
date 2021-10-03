@@ -26,7 +26,7 @@
 
 .promo {
     min-height: 800px;
-    background: url(/src/img/bg/first_screen.jpg) center center/cover no-repeat;
+    background: url(../img/bg/first_screen.jpg) center center/cover no-repeat;
     padding: 39px 0 62px 0;
 }
 
@@ -115,10 +115,6 @@ h2.title {
     letter-spacing: normal;
     text-align: center;
     text-transform: uppercase;
-    /* Text style for "узнать бол" */
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
 }
 
 .more .more_img {
@@ -203,7 +199,6 @@ h2.title {
     font-weight: 900;
     font-style: normal;
     letter-spacing: normal;
-    line-height: 12px;
     text-align: left;
     text-transform: uppercase;
 }
@@ -236,7 +231,7 @@ h2.title {
 .finish {
     min-height: 447px;
     padding: 86px 0 79px 0;
-    background: url(/src/img/bg/second_screen.png) center center/ cover no-repeat;
+    background: url(../img/bg/second_screen.png) center center/ cover no-repeat;
 }
 
 .finish .finish_wrapper {
