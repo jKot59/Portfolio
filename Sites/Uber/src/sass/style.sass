@@ -1,3 +1,11 @@
+$main_color: #1eacc7
+$sub_color: #ff5656
+
+@mixin btn_hover
+	&:hover
+		background-image: none
+		background-color: $main_color
+
 *
 	font-family: 'Roboto', sans-serif
 
@@ -18,13 +26,13 @@ nav
 	margin: 0
 	list-style-type: none
 
-	.menu_link
+	&_link
 		color: #ffffff
 		font-size: 15px
 		font-weight: 300
 		text-decoration: none
 
-	.menu_item
+	&_item
 		border-right: 2px dotted black
 		padding-right: 28px
 
@@ -36,26 +44,26 @@ nav
 	background-color: rgba(0, 0, 0, 0.6)
 	z-index: 1
 
-	.subheader_logo
+	&_logo
 		display: block
 		margin-top: 16px
 		max-width: 100%
 
-	.subheader_official
+	&_official
 		margin-top: 6px
 		opacity: 0.5
 		color: #ffffff
 		font-size: 13px
 		font-weight: 400
 
-	.subheader_call
+	&_call
 		margin-top: 19px
 		color: #ffffff
 		font-size: 12px
 		font-weight: 300
 		text-align: right
 
-	.subheader_phone
+	&_phone
 		display: block
 		margin-top: 6px
 		color: #ffffff
@@ -66,27 +74,28 @@ nav
 		text-transform: uppercase
 		text-decoration: none
 
-	.subheader_btn
+	&_btn
 		width: 172px
 		margin-top: 19px
 		height: 46px
 		box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.12)
 		border: none
 		border-radius: 5px
-		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+		background-image: linear-gradient(to top, $main_color 0%, #4ce2ff 100%)
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
 		color: #ffffff
 		font-size: 14px
 		font-weight: 400
 		text-align: center
 		text-transform: uppercase
+		@include btn_hover
 
 .promo
 	min-height: 800px
 	background: url('../img/bg/first_bg.jpg') center (center / cover) no-repeat
 	padding: 150px 0 135px 0
 
-	.promo_header
+	&_header
 		color: #ffffff
 		font-size: 60px
 		font-weight: 700
@@ -94,7 +103,7 @@ nav
 		text-transform: uppercase
 		margin: 0
 
-	.promo_subheader
+	&_subheader
 		font-size: 36px
 		color: #ffffff
 		font-weight: 700
@@ -103,7 +112,7 @@ nav
 		margin: 0
 		margin-top: 21px
 
-	.promo_descr
+	&_descr
 		color: #ffffff
 		font-size: 18px
 		font-weight: 400
@@ -112,14 +121,14 @@ nav
 		margin: 0
 		margin-top: 23px
 
-	.promo_btn
+	&_btn
 		display: block
 		width: 259px
 		height: 63px
 		box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12)
 		border: none
 		border-radius: 5px
-		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%)
+		background-image: linear-gradient(to top, $main_color 0%, #4ce2ff 100%)
 		text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.21)
 		color: #ffffff
 		font-size: 18px
@@ -130,6 +139,7 @@ nav
 		text-align: center
 		text-transform: uppercase
 		margin: 118px auto 0 auto
+		@include btn_hover
 
 .causes
 	padding: 71px 0 65px 0
@@ -146,6 +156,15 @@ nav
 	font-weight: 400
 	text-align: center
 	text-transform: uppercase
+	&_white
+		width: 112px
+		height: 24px
+		background-color: #ffffff
+		color: #070716
+		font-size: 11px
+		font-weight: 400
+		text-align: center
+		text-transform: uppercase
 
 .title
 	margin: 38px auto 0 auto
@@ -154,6 +173,13 @@ nav
 	font-weight: 700
 	text-align: center
 	text-transform: uppercase
+	&_white
+		color: #ffffff
+		font-size: 38px
+		font-weight: 700
+		line-height: 48px
+		text-align: center
+		text-transform: uppercase
 
 .subtitle
 	margin-top: 19px
@@ -161,6 +187,8 @@ nav
 	font-size: 17px
 	font-weight: 400
 	text-align: center
+	&_white
+		color: white
 
 .causes_block
 	display: flex
@@ -173,7 +201,7 @@ nav
 	width: 113px
 	height: 113px
 	border-radius: 100%
-	background-color: #1eacc7
+	background-color: $main_color
 
 	.causes_icon-wallet
 		margin: 0 19px 0 14px
@@ -200,13 +228,13 @@ nav
 		margin: 0 23px 0 17px
 
 .causes
-	.causes_title
-		color: #1eacc7
+	&_title
+		color: $main_color
 		font-size: 17px
 		font-weight: 400
 		line-height: 21px
 
-	.causes_subtitle
+	&_subtitle
 		width: 346px
 		color: #202020
 		font-size: 15px
@@ -264,30 +292,32 @@ nav
 			border-radius: 100%
 			padding: 6px
 			cursor: pointer
-			img
-				width: 100%
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				right: 50%
+				transform: translateX(50%)
+				background: $main_color
+				width: 2px
+				height: 14px
+			&::after
+				content: ''
+				display: block
+				height: 2px
+				width: 14px
+				background: $main_color
+			&:hover
+				&::before, &::after
+					background-color: $sub_color
 
 .choice
 	padding-top: 57px
 	padding-bottom: 138px
 	min-height: 896px
 	background: url('../img/bg/choice_bg.jpg') center (center / cover) no-repeat
-	&_descr
-		width: 112px
-		height: 24px
-		background-color: #ffffff
-		color: #070716
-		font-size: 11px
-		font-weight: 400
-		text-align: center
-		text-transform: uppercase
 	&_title
-		color: #ffffff
-		font-size: 38px
-		font-weight: 700
-		line-height: 48px
-		text-align: center
-		text-transform: uppercase
+		
 	&_subtitle
 		color: #ffffff
 		font-size: 17px
@@ -305,3 +335,135 @@ nav
 		font-weight: 300
 		line-height: 24px
 		text-align: center	
+
+.require
+	padding: 68px 0 84px 0
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0
+	&_title
+		color: #1ca8c3
+		font-size: 22px
+		font-weight: 400
+	&_descr
+		color: #1ca8c3
+		font-size: 17px
+		font-weight: 300
+		margin-top: 25px
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 20px
+		margin-bottom: 0
+		li
+			position: relative
+			color: #222222
+			font-size: 17px
+			font-weight: 300
+			margin-bottom: 10px
+			&::before
+				content: ''
+				position: absolute
+				left: -32px
+				top: 3px
+				height: 21px
+				width: 20px
+				background: url('../icons/check_mark.png') center (center / cover) no-repeat
+
+	.warning
+		.require_title
+			color: $sub_color
+		.require_list
+			li
+				&::before
+					background: url('../icons/check_mark_red.png') center (center / cover) no-repeat
+
+.world
+	position: relative
+	min-height: 717px
+	padding: 49px 0
+	background: url('../img/bg/fourth_bg.jpg') center (center / cover) no-repeat
+	&_link
+		position: absolute
+		bottom: 49px
+		left: 50%
+		transform: translateX(-50%)
+		color: #1fbad6
+		font-size: 15px
+		font-weight: 400
+		text-transform: uppercase
+		text-decoration: none
+
+footer
+	position: relative
+	padding-top: 14px
+	text-align: center
+	min-height: 164px
+	.links_block
+		width: 390px
+		margin: 0 auto
+		margin-top: 32px
+
+	.first_row
+		display: flex
+		justify-content: space-between
+		padding: 0 10px
+
+		a
+			display: block
+			text-decoration: none
+			color: #070716
+			font-size: 15px
+			font-weight: 300
+			text-transform: uppercase
+	.second_row
+		margin-top: 12px
+		display: flex
+		justify-content: space-between
+		a
+			text-decoration: none
+			color: #999999
+			font-size: 11px
+			font-weight: 300
+			text-transform: uppercase
+	.language
+		margin-top: 19px
+		color: #1fbad6
+		font-size: 11px
+		font-weight: 400
+		text-align: center
+		margin-bottom: 31px
+	.black_line
+		height: 8px
+		background-color: #000
+	.social
+		position: absolute
+		left: 23px
+		top: 51px
+		display: flex
+		&_eclipse
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-right: 9px
+			width: 32px
+			height: 32px
+			border-radius: 100%
+			background: #000
+			i
+				font-style: normal
+				color: white
+		
+	.apps
+		position: absolute
+		right: 25px
+		top: 51px
+		width: 296px
+		height: 27px
+		background-color: #000
+.divider
+	margin: 0 auto
+	height: 4px
+	width: 299px
+	background: $main_color
