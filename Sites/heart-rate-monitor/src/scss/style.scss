@@ -9,9 +9,25 @@
     margin: 0 auto;
 }
 
+.title {
+    color: #0d0d0d;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    &_left {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: left;
+        text-transform: uppercase;
+    }
+}
 
 @import 'blocks/promo';
 @import 'blocks/header';
 @import 'blocks/buttons';
 @import 'blocks/advantage';
 @import 'base/media';
+@import 'blocks/consultation';
+@import 'blocks/forms';
