@@ -8,6 +8,19 @@
         }
 
     }
+
+    .title {
+        &_left {
+            font-size: 30px;
+        }
+    }
+
+    .consultation {
+        padding: 100px 0 92px 50px;
+        &__descr {
+            font-size: 18px;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -77,6 +90,26 @@
             padding: 0;
         }
     }
+
+    .consultation {
+        min-height: 600px;
+        padding: 100px 0 92px 0;
+        &__descr {
+            line-height: 22px;
+            text-align: center;
+        }
+        .feed-form {
+            margin: 0 auto;
+            margin-top: 36px;
+        }
+    }
+
+    .title {
+        &_left {
+            font-size: 22px;
+            text-align: center;
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -113,6 +146,10 @@
 
     .title {
         font-size: 20px;
+        &_left {
+            font-size: 13px;
+            line-height: 18px;
+        }
     }
     
     .advantage {
@@ -134,6 +171,16 @@
         &__item-subtitle {
             margin-top: 5px;
             padding: 0;
+        }
+    }
+
+    .consultation {
+        &__descr {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        .feed-form {
+            width: 250px;
         }
     }
 
