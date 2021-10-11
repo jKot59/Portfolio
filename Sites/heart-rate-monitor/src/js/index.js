@@ -1,4 +1,7 @@
-import x from './modules/slider.js';
+import moveSlider from './modules/slider.js';
+import cardInfo from './modules/card-info';
+import tabMenu from './modules/tab-menu';
 
-x()
-console.log('here')
+moveSlider()
+cardInfo()
+tabMenu()

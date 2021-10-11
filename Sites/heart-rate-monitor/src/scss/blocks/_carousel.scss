@@ -1,5 +1,59 @@
 .carousel {
+    position: relative;
     padding: 81px 0;
     width: 750px;
     margin: 0 auto;
+    &__inner {
+        position: relative;
+        overflow: hidden;
+        width: 750px;
+        height: 527px;
+    }
+    &__sliderWindow {
+        position: absolute;
+        display: flex;
+        transition: .6s all;
+        div {
+            &:nth-child(2) {
+                img {
+                    height: 534px;
+                    margin-right: 66px;
+                }
+            }
+        }
+    }
+    &__btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 50px;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        &_left {
+            left: -96px;
+        }
+        &_right {
+            right: -100px;
+        }
+    }
+    &__dots {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
+    &__dot {
+        margin: 0 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid black;
+        cursor: pointer;
+        &_active {
+            background-color: red;
+        }
+    }
 }
