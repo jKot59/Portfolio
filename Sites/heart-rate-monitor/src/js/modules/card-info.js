@@ -5,12 +5,14 @@ function cardInfo () {
     let list = document.querySelectorAll('.catalog-item__list')
     
 
-    linkMore.forEach( (item, i) => {
-        item.addEventListener('click', button => toggleCard(button, i))
-    })
-    linkBack.forEach( (item, i) => {
-        item.addEventListener('click', button => toggleCard(button, i))
-    })
+    setMoreListeners(linkMore)
+    setMoreListeners(linkBack)
+
+    function setMoreListeners (button) {
+        button.forEach( (item, i) => {
+            item.addEventListener('click', button => toggleCard(button, i))
+        })
+    }
 
     function toggleCard (button, i) {
         button.preventDefault()

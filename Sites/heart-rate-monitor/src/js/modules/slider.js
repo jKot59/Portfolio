@@ -7,7 +7,6 @@ function moveSlider () {
 
 
     let positionOfSlider = 0
-    // let sliderWidth = parseInt(window.getComputedStyle(slider).getPropertyValue("width"))
     let sliderWidth = slider.offsetWidth
     // минус 1 потому что первый слайдер начинается с 0, а не с 750px. Т.е общая
     // ширина 1500 (750*2), а не 2250
@@ -15,10 +14,14 @@ function moveSlider () {
 
     createDots()
     makeAdotActive()
-    leftArrow.addEventListener('click', switchSliderLeft)
-    rightArrow.addEventListener('click', switchSliderRight)
+    setArrowListener(leftArrow, switchSliderLeft)
+    setArrowListener(rightArrow, switchSliderRight)
     // ставим сразу инлайн стиль для позиции, чтобы первое переключение было плавное
     sliderWindow.style.left=`${positionOfSlider}px`
+
+    function setArrowListener (arrow, event) {
+        arrow.addEventListener('click', event)
+    }
 
     function createDots() {
         for (let i = 0; i < countOfSliders + 1; i++) {

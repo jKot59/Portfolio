@@ -1,0 +1,28 @@
+.reviews {
+    padding-bottom: 71px;
+    &__review {
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+    }
+    &__avatar {
+        margin-right: 62px;
+    }
+    &__title {
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: left;
+    }
+    &__achievment {
+        color: #646464;
+        font-size: 14px;
+        text-align: left;
+    }
+    &__message {
+        margin-top: 10px;
+        color: #0d0d0d;
+        font-size: 16px;
+        text-align: left;
+    }
+}
