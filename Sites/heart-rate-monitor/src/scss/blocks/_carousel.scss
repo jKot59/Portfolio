@@ -12,6 +12,7 @@
     &__sliderWindow {
         position: absolute;
         display: flex;
+        align-items: center;
         transition: .6s all;
         div {
             &:nth-child(2) {

@@ -35,8 +35,12 @@
         }
         &__sliderWindow {
             div {
-                display: flex;
-                align-items: center;
+                &:nth-child(2) {
+                    img {
+                        height: 440px;
+                        margin-right: 0px;
+                    }
+                }
             }
             img {
                 display: block;
@@ -51,6 +55,22 @@
             &_right {
                 right: -50px;
             }
+        }
+    }
+    .catalog {
+        &__content {
+            justify-content: center;
+            
+        }
+        &-item {
+            margin: 0 5px;
+            margin-bottom: 20px;
+            
+        }
+    }
+    .reviews {
+        &__user {
+            max-width: 640px;
         }
     }
 }
@@ -88,9 +108,30 @@
             height: 400px;
         }
         &__sliderWindow {
+            div {
+                &:nth-child(2) {
+                    img {
+                        height: 360px;
+                    }
+                }
+            }
             img {
                 width: 450px;
             }
+        }
+    }
+    .reviews {
+        &__avatar {
+            margin-right: 40px;
+        }
+        &__title {
+            font-size: 17px;
+        }
+        &__message {
+            font-size: 15px;
+        }
+        &__user {
+            width: 390px;
         }
     }
 }
@@ -162,6 +203,23 @@
             }
             img {
                 width: 15px;
+            }
+        }
+    }
+    .catalog {
+        &__tab {
+            width: 150px;
+            font-size: 15px;
+            &_active {
+                font-size: 15px;
+            }
+        }
+    }
+    .reviews {
+        &__avatar {
+            margin-right: 20px;
+            img {
+                width: 100px;
             }
         }
     }
@@ -245,6 +303,13 @@
             width: 100%;
         }
         &__sliderWindow {
+            div {
+                &:nth-child(2) {
+                    img {
+                        height: 260px;
+                    }
+                }
+            }
             img {
                 width: 320px;
             }
@@ -260,6 +325,92 @@
         &__dot {
             width: 30px;
             height: 30px;
+        }
+    }
+    .catalog {
+        margin-top: 30px;
+        &__tabs {
+            flex-direction: column;
+        }
+        &__tab {
+            margin-bottom: 10px;
+            width: 220px;
+            font-size: 15px;
+            &_active {
+                font-size: 15px;
+            }
+        }
+    }
+    .reviews {
+        &__review {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__avatar {
+            margin-right: 0px;
+            img {
+                width: 100px;
+            }
+        }
+        &__user {
+            width: 100%;
+        }
+        &__title {
+            text-align: center;
+        }
+        &__achievment {
+            text-align: center;
+        }
+        &__message {
+            padding: 0 10px;
+            font-size: 13px;
+        }
+    }
+    .footer {
+        &__addr {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        &__info {
+            width: 270px;
+            height: 200px;
+            font-size: 14px;
+            line-height: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        &__social {
+            margin-top: 20px;
+        }
+        &__social-item {
+            font-size: 20px;
+            height: 45px;
+        }
+    }
+    .modal {
+        width: 290px;
+        min-height: 365px;
+        padding: 20px;
+        padding-top: 40px;
+        &__title {
+            font-size: 15px;
+        }
+        &__subtitle {
+            font-size: 12px;
+        }
+        .button {
+            margin-top: 0;
+        }
+        &__close {
+            top: 10px;
+            right: 5px;
+        }
+        
+    }
+    .feed-form {
+        width: 100%;
+        &_mt25 {
+            margin-top: 10px;
         }
     }
 }

@@ -43,7 +43,7 @@
         margin-top: 60px;
         display: flex;
         display: none;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
         &_active {
             display: flex;
@@ -51,6 +51,8 @@
     }
     &-item {
         margin-bottom: 20px;
+        margin-right: 8px;
+        margin-left: 8px;
         width: 300px;
         min-height: 440px;
         border: 2px solid #e8e8e8;
