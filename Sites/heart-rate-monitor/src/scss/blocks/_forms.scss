@@ -24,4 +24,12 @@
             margin-top: 25px;
         }
     }
+    .error {
+        border: 2px solid red;
+    }
+    label.error {
+        border: none;
+        margin-top: -15px;
+        margin-bottom: 10px;
+    }
 }
