@@ -4,6 +4,8 @@ function validate () {
     validateForms('#consultation-form')
     validateForms('#order form')
 
+    $('[name=phone]').mask("+7 (999) 999-9999")
+
     function validateForms (form) {
         $(form).validate({
             rules: {
