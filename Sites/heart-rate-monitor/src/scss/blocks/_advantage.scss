@@ -22,6 +22,12 @@
             color: #ff0000;
             text-decoration: underline;
         }
+        &_animated {
+            animation: heartbeat 1.5s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
     }
     &__item-title {
         margin-top: 38px;
@@ -36,4 +42,5 @@
         font-size: 14px;
         text-align: center;
     }
+
 }

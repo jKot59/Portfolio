@@ -14,8 +14,11 @@
     transform: translate(-50%, -50%);
     width: 380px;
     min-height: 400px;
+    height: auto;
     background-color: #f2f2f2;
     padding: 38px 40px 40px 40px;
+    overflow: visible;
+
     &__close {
         position: absolute;
         top: 0;
@@ -43,4 +46,12 @@
 
 #consultation, #order, #thanks {
     display: none;
+}
+
+.spinner-border {
+    display: none;
+    margin: 0 auto;
+    &_mt10 {
+        margin-top: 10px;
+    }
 }

@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Пульсометр</title>
-    <link rel="stylesheet" href="style/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="style/fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/brands.min.css">
     <link rel="stylesheet" href="style/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -75,7 +73,7 @@
                     </div>
                 </div>
                 <div class="advantage__item">
-                    <img src="icon/heart_icon.png" alt="heart" class="advantage__item-img">
+                    <img src="icon/heart_icon.png" alt="heart" class="advantage__item-img advantage__item_animated">
                     <div class="advantage__item-title">
                         Заботимся о здоровье
                     </div>
@@ -116,6 +114,7 @@
                 <input name="email" required placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">заказать консультацию</button>
+                <div class="spinner-border spinner-border_mt10" role="status"></div>
             </form>
         </div>
     </section>
@@ -146,7 +145,7 @@
                 <li class="catalog__tab"><div>для триатлона</div></li>
             </ul>
             <div class="catalog__content">
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__animated animate__fadeIn" data-wow-delay="0.1s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/watch_card.jpg" alt="pulsometr" class="catalog-item__img">
@@ -179,7 +178,7 @@
                         <button class="button button_mini">КУПИТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/watch_card.jpg" alt="pulsometr" class="catalog-item__img">
@@ -212,7 +211,7 @@
                         <button class="button button_mini">КУПИТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__animated animate__fadeIn" data-wow-delay="0.3s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/watch_card.jpg" alt="pulsometr" class="catalog-item__img">
@@ -245,7 +244,7 @@
                         <button class="button button_mini">КУПИТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/watch_card.jpg" alt="pulsometr" class="catalog-item__img">
@@ -278,7 +277,7 @@
                         <button class="button button_mini">КУПИТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__animated animate__fadeIn" data-wow-delay="0.5s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/watch_card.jpg" alt="pulsometr" class="catalog-item__img">
@@ -311,7 +310,7 @@
                         <button class="button button_mini">КУПИТЬ</button>
                     </div>
                 </div>
-                <div class="catalog-item">
+                <div class="catalog-item wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
                     <div class="catalog-item__wrapper">
                         <div class="catalog-item__content catalog-item__content_active">
                             <img src="img/watch_card.jpg" alt="pulsometr" class="catalog-item__img">
@@ -454,7 +453,7 @@
     <section class="reviews">
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
-            <div class="reviews__review">
+            <div class="reviews__review wow  animate__animated animate__fadeInUp">
                 <div class="reviews__avatar">
                     <img src="img/review_1.jpg" alt="review" class="reviews__img">
                 </div>
@@ -475,7 +474,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews__review">
+            <div class="reviews__review wow animate__animated animate__fadeInUp">
                 <div class="reviews__avatar">
                     <img src="img/review_2.jpg" alt="review" class="reviews__img">
                 </div>
@@ -494,7 +493,7 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews__review">
+            <div class="reviews__review wow animate__animated animate__fadeInUp">
                 <div class="reviews__avatar">
                     <img src="img/review_3.jpg" alt="review" class="reviews__img">
                 </div>
@@ -547,6 +546,7 @@
                 <input name="email" required placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">заказать консультацию</button>
+                <div class="spinner-border spinner-border_mt10" role="status"></div>
             </form>
         </div>
 
@@ -564,6 +564,7 @@
                 <input name="email" placeholder="Ваш E-mail" type="email">
 
                 <button class="button button_submit">Купить</button>
+                <div class="spinner-border spinner-border_mt10" role="status"></div>
             </form>
         </div>
 
@@ -578,10 +579,14 @@
             </div>
         </div>
     </div>
+    <a href="#up" class="page-up">
+        <img src="icon/arrow-up.svg" alt="arrow-up">
+    </a>
     <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.maskedinput.js"></script>
     <script src="js/bundle.js"></script>

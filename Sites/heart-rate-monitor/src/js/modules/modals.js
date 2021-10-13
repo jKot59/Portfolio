@@ -5,7 +5,8 @@ function modals () {
           consultation = document.getElementById('consultation'),
           crosses = document.querySelectorAll('.modal__close'),
           buyBtn = document.querySelectorAll('.catalog button'),
-          allCards = document.querySelectorAll('.catalog-item')
+          allCards = document.querySelectorAll('.catalog-item'),
+          thanks = document.getElementById('thanks')
 
 
     showModal(callBtn, 'call')
@@ -44,6 +45,7 @@ function modals () {
                 overlay.style.display='none'
                 consultation.style.display='none'
                 order.style.display='none'
+                thanks.style.display='none'
             })
         })
     }
