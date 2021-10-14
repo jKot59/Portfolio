@@ -1,9 +1,7 @@
 function mailer () {
 
     $(document).ajaxSend(function() {
-        $('#consultation-form .spinner-border').fadeIn()
-        $('#consultation .spinner-border').fadeIn()
-        $('#order .spinner-border').fadeIn()
+        $('.spinner-border', this).fadeIn()
     })
 
     $('form').submit(function (event) {
