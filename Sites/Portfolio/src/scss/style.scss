@@ -1,0 +1,17 @@
+@import 'libs/bootstrap-reboot';
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    // font-family: ;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+@import 'blocks/promo';
+@import 'base/media';
