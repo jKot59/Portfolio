@@ -1,0 +1,36 @@
+.about {
+    position: relative;
+    padding: 120px 0;
+    min-height: 600px;
+    &__title {
+        padding-left: 12px;
+        position: relative;
+        margin-bottom: 0;
+        line-height: 37px;
+        @include before_circle;
+        
+    }
+    &__grid {
+        display: grid;
+        width: 1040px;
+        grid-template-columns: 400px 600px;
+        column-gap: 68px;
+    }
+    &__photo {
+        grid-column: 1/2;
+    }
+
+    &__descr {
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &__skills {
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 40px;
+        grid-gap: 20px;
+    }
+}

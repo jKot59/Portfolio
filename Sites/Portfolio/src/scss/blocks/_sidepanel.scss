@@ -24,4 +24,14 @@
 
         }
     }
+    a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #000;
+        transform: rotate(-90deg);
+        &:hover {
+            text-decoration: none;
+            color: #000;
+        }
+    }
 }

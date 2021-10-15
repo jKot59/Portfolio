@@ -1,0 +1,32 @@
+.card {
+    display: flex;
+    &__text {
+        display: flex;
+        flex-direction: column;
+    }
+    &__img {
+        position: relative;
+        width: 60px;
+        padding-top: 15px;
+        padding-left: 15px;
+        @include before_circle;
+        &:before {
+            content: '';
+            top: 0;
+            left: 0;
+            transform: translate(0);
+        }
+        img {
+            display: block;
+        }
+    }
+    &__text {
+        width: 200px;
+    }
+    &__subtitle {
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 18px;
+        font-weight: 500;
+    }
+}

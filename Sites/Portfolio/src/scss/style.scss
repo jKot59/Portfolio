@@ -1,6 +1,7 @@
 @import 'libs/bootstrap-reboot';
 @import 'base/variables';
 @import 'base/mixins';
+@import 'base/font-icon';
 
 * {
     // font-family: ;
@@ -17,4 +18,9 @@
 @import 'blocks/title';
 @import 'blocks/buttons';
 @import 'blocks/sidepanel';
+@import 'blocks/menu';
+@import 'blocks/burger';
+@import 'blocks/about';
+@import 'blocks/card';
+@import 'blocks/divider';
 @import 'base/media';
