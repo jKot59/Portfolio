@@ -2,12 +2,16 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 60px;
+    margin-bottom: 0;
     &_fsz14 {
         font-size: 14px;
         line-height: 21px;
     }
     &_fsz16 {
         font-size: 16px;
+    }
+    &_fsz20 {
+        font-size: 20px;
     }
     &_fsz36 {
         font-size: 36px;
