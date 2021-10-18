@@ -12,3 +12,17 @@
         z-index: -1;
     }
 }
+@mixin before_circle_small {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 59%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background-color: $main-color;
+        border-radius: 100%;
+
+    }
+}
