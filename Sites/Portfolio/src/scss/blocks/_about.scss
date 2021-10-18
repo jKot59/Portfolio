@@ -18,12 +18,16 @@
     }
     &__grid {
         display: grid;
-        width: 1040px;
         grid-template-columns: 400px 600px;
         column-gap: 68px;
     }
     &__photo {
         grid-column: 1/2;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__descr {
