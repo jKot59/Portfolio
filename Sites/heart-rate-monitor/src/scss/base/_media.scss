@@ -223,6 +223,15 @@
             }
         }
     }
+    .policy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
 
 @media (max-width: 575px) {
@@ -411,6 +420,12 @@
         width: 100%;
         &_mt25 {
             margin-top: 10px;
+        }
+    }
+    .policy {
+        span {
+            margin-left: 20px;
+            width: 200px;
         }
     }
 }

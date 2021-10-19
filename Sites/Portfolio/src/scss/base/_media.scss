@@ -30,7 +30,7 @@
         &__grid {
             justify-content: center;
         }
-        .vertical, .horizontal {
+        .vertical, .horizontal, .horizontal-uber{
             grid-column: unset;
             grid-row: unset;
         }
@@ -64,6 +64,7 @@
     }
     .resume {
         &__grid {
+            grid-template-columns: repeat(2,334px);
             padding: 60px 0px 0 0px;
             column-gap: 50px;
         }
@@ -130,17 +131,12 @@
         &__photo {
             img {
                 grid-row: 1;
-                object-position: 0px -240px;
+                object-position: 0px 0px;
             }
         }
         &__skills {
             grid-template-columns: repeat(2,245px);
             justify-content: center;
-        }
-        .card {
-            &__img {
-                
-            }
         }
     }
     .resume {
@@ -222,7 +218,7 @@
     }
     .promo {
         padding-top: 50%;
-        background: linear-gradient( rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) ), url('../img/bg/Background.jpg') 60% center/cover no-repeat;
+        background: linear-gradient( rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) ), url('../img/bg/bg.jpg') 60% center/cover no-repeat;
         &__title {
             width: 310px;
         }
@@ -251,7 +247,7 @@
         }
         &__photo {
             img {
-                object-position: 0px -180px;
+                object-position: 0px 0px;
             }
         }
         &__skills {

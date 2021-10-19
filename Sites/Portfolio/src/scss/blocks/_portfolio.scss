@@ -14,6 +14,10 @@
             grid-column: 2 / 4;
             grid-row: 2;
         }
+        .horizontal-uber {
+            grid-column: 1 / 3;
+            grid-row: 1;
+        }
     }
     &__item {
         img {

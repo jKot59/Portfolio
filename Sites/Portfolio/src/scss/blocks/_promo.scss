@@ -1,7 +1,7 @@
 .promo {
     height: 100vh;
     position: relative;
-    background: url('../img/bg/Background.jpg') center (center / cover) no-repeat;
+    background: linear-gradient(rgba(255, 255, 255, .6), rgba(255, 255, 255, .6)) ,url('../img/bg/bg.jpg') center (center / cover) no-repeat;
     padding-top: 265px;
     &__title {
         margin-top: 10px;

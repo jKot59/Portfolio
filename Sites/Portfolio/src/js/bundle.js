@@ -16,7 +16,7 @@
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/js/modules/menu.js\");\n/* harmony import */ var _modules_abilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/abilities */ \"./src/js/modules/abilities.js\");\n\r\n\r\n\r\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_modules_abilities__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\n\n//# sourceURL=webpack://uber/./src/js/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/menu */ \"./src/js/modules/menu.js\");\n/* harmony import */ var _modules_abilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/abilities */ \"./src/js/modules/abilities.js\");\n/* harmony import */ var _modules_mailer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/mailer */ \"./src/js/modules/mailer.js\");\n\r\n\r\n\r\n\r\n(0,_modules_menu__WEBPACK_IMPORTED_MODULE_0__[\"default\"])()\r\n;(0,_modules_abilities__WEBPACK_IMPORTED_MODULE_1__[\"default\"])()\r\n;(0,_modules_mailer__WEBPACK_IMPORTED_MODULE_2__[\"default\"])()\n\n//# sourceURL=webpack://uber/./src/js/index.js?");
 
 /***/ }),
 
@@ -27,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n// checking for percent value dont be more than 100% and less than 0%\r\n// and dimention have to has simbol %\r\n\r\nfunction abilities () {\r\n    const dimentions = document.querySelectorAll('.skills__level-header-percent'),\r\n          levels = document.querySelectorAll('.skills__level-scale-current')\r\n\r\n    dimentions.forEach( (item, i) => {\r\n        let dimention = item.innerText\r\n        let dimentionRegExp = dimention.match(/[\\d]{0,3}\\%/g)\r\n\r\n        if(dimentionRegExp !== null) {\r\n            let percentValue = parseInt(dimentionRegExp.join(''))\r\n            if(percentValue <= 100 && percentValue >= 0)  levels[i].style.width = dimention\r\n        } else {\r\n            levels[i].style.width = 0\r\n        }\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (abilities);\n\n//# sourceURL=webpack://uber/./src/js/modules/abilities.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/mailer.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/mailer.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction mailer () {\r\n    $('form').submit(function (event) {\r\n        event.preventDefault()\r\n        \r\n        $.ajax({\r\n            type:'POST',\r\n            url:'./mailer/smart.php',\r\n            data:$(this).serialize(),\r\n            \r\n        }).done(function () {\r\n            $(this).val(\"\")\r\n            $('form').trigger('reset')\r\n        })\r\n        return false\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mailer);\n\n//# sourceURL=webpack://uber/./src/js/modules/mailer.js?");
 
 /***/ }),
 
