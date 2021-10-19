@@ -2,7 +2,7 @@
     padding-bottom: 120px;
     &__grid {
         display: grid;
-        grid-template-columns: repeat(2, 425px);
+        grid-template-columns: repeat(2, auto);
         padding: 60px 65px 0 65px;
         column-gap: 135px;
     }
@@ -48,13 +48,13 @@
             padding: 45px 0 0 107px;
         }
         &-body {
+            font-weight: 500;
             padding-left: 50px;
             margin-top: 9px;
             line-height: 18px;
         }
         &-icon {
             position: absolute;
-            bottom: 0px;
             left: 51px;
             padding: 15px 0 0 15px;
             @include before_circle;

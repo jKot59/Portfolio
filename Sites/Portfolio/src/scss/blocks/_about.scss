@@ -20,6 +20,7 @@
         display: grid;
         grid-template-columns: 400px 600px;
         column-gap: 68px;
+        row-gap: 34px;
     }
     &__photo {
         grid-column: 1/2;
