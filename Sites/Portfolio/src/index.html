@@ -46,12 +46,12 @@
             </div>
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
-                    <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
-                    <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-                    <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
-                    <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-                    <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+                    <li class="menu__link"><a href="#about">ПРО МЕНЯ</a></li>
+                    <li class="menu__link"><a href="#exp">МОЙ ОПЫТ</a></li>
+                    <li class="menu__link"><a href="#skills">МОИ НАВЫКИ</a></li>
+                    <li class="menu__link"><a href="#portfolio">МОИ РАБОТЫ</a></li>
+                    <li class="menu__link"><a href="#price">ПРАЙС-ЛИСТ</a></li>
+                    <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
             <div class="menu__social">
@@ -120,7 +120,7 @@
         </div>
     </section>
 
-    <section class="resume">
+    <section id="exp" class="resume">
         <div class="container">
             <h2 class="title title_fsz16 title__section-title">Опыт</h2>
             <div class="title title_fsz36 title__section-subtitle">Чем я буду полезен</div>
@@ -197,7 +197,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section id="skills" class="skills">
         <div class="container">
             <h2 class="title title_fsz16 title__section-title">Навыки</h2>
             <div class="title title_fsz36 title__section-subtitle">Что я использую в работе</div>
@@ -308,7 +308,7 @@
         </div>
     </section>
 
-    <section class="price">
+    <section id="price" class="price">
         <div class="container">
             <h2 class="title title_fsz16 title__section-title">Прайс-лист</h2>
             <div class="divider"></div>
@@ -362,7 +362,7 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section id="contacts" class="contacts">
         <div class="container">
             <div class="contacts__grid">
                 <div class="contacts__photo">
@@ -399,11 +399,34 @@
                                 <span>Я согласен(а) с <a href="privacy.html">политикой конфиденциальности</a></span>
                             </div>
                         </div>
+                        <div class="spinner-border spinner-border_mt10" role="status"></div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="overlay">
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">
+                Спасибо!
+            </div>
+            <div class="modal__subtitle">
+                Сообщение отправлено.
+            </div>
+        </div>
+        <div class="modal modal_mini" id="error">
+            <div class="modal__close">&times;</div>
+            <div class="modal__title">
+                Сообщение не отправлено
+            </div>
+            <div class="modal__subtitle">
+                Пожалуйста, сообщите об этом 5Val994@mail.ru
+            </div>
+        </div>
+    </div>
+
     <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

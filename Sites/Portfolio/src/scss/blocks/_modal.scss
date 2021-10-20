@@ -1,0 +1,48 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    min-height: 400px;
+    height: auto;
+    background-color: #f2f2f2;
+    padding: 38px 40px 40px 40px;
+    overflow: visible;
+
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        font-size: 41px;
+        color: $main-color;
+        line-height: 17px;
+        cursor: pointer;
+    }
+    &__title {
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__subtitle {
+        color: #0d0d0d;
+        font-size: 14px;
+        text-align: center;
+    }
+    &_mini {
+        min-height: 140px;
+    }
+}
+
+#consultation, #order, #thanks, #error {
+    display: none;
+}
+
+.spinner-border {
+    display: none;
+    margin: 0 auto;
+    &_mt10 {
+        margin-top: 10px;
+    }
+}

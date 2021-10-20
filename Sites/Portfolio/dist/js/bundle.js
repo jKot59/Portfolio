@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction mailer () {\r\n    const form = document.querySelector('.contacts__form')\r\n\r\n    form.addEventListener('submit', (e) => {\r\n        e.preventDefault()\r\n\r\n        fetch('./mailer/smart.php', {\r\n            method: 'POST',\r\n            body: new FormData(form)\r\n        })\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mailer);\n\n//# sourceURL=webpack://uber/./src/js/modules/mailer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _postMessage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./postMessage */ \"./src/js/modules/postMessage.js\");\n/* harmony import */ var _showMessage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./showMessage */ \"./src/js/modules/showMessage.js\");\n/* harmony import */ var _spinner__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./spinner */ \"./src/js/modules/spinner.js\");\n\r\n\r\n\r\n\r\nfunction mailer () {\r\n    const form = document.querySelector('.contacts__form'),\r\n          thanks = document.getElementById('thanks'),\r\n          cross = document.querySelectorAll('.modal__close'),\r\n          error = document.getElementById('error')\r\n\r\n    form.addEventListener('submit', (e) => {\r\n        e.preventDefault()\r\n\r\n        ;(0,_spinner__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('show')\r\n\r\n        ;(0,_postMessage__WEBPACK_IMPORTED_MODULE_0__[\"default\"])('./mailer/smart.php', form)\r\n        .then(() => {\r\n            ;(0,_showMessage__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(thanks, cross[0])\r\n            form.reset()\r\n        })\r\n        .catch(() => {\r\n            (0,_showMessage__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(error, cross[1])\r\n        })\r\n        .finally(() => (0,_spinner__WEBPACK_IMPORTED_MODULE_2__[\"default\"])('hide'))\r\n    })\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mailer);\n\n//# sourceURL=webpack://uber/./src/js/modules/mailer.js?");
 
 /***/ }),
 
@@ -47,6 +47,36 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction menu () {\r\n    const burger = document.querySelector('.burger'),\r\n          menu = document.querySelector('.menu'),\r\n          cross = document.querySelector('.menu__close'),\r\n          overlay = document.querySelector('.menu__overlay')\r\n\r\n\r\n    toggleMenu(burger)\r\n    toggleMenu(cross)\r\n    toggleMenu(overlay)\r\n\r\n    function toggleMenu (btn) {\r\n        btn.addEventListener('click', () => {\r\n            menu.classList.toggle('menu_active')\r\n        })\r\n    }\r\n\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menu);\n\n//# sourceURL=webpack://uber/./src/js/modules/menu.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/postMessage.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/postMessage.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nasync function postMessage (url, form) {\r\n    const res = await fetch(url, {\r\n        method: 'POST',\r\n        body: new FormData(form)\r\n    })\r\n\r\n    if(!res.ok) {\r\n        throw new Error(`Couldn't fetch ${url}, status ${res.status}`)\r\n    }\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (postMessage);\n\n//# sourceURL=webpack://uber/./src/js/modules/postMessage.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/showMessage.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/showMessage.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction showMessage (modal, cross) {\r\n    const overlay = document.querySelector('.overlay')\r\n\r\n    overlay.style.display = 'block'\r\n    modal.style.display = 'block'\r\n\r\n    cross.addEventListener('click', () => {\r\n        overlay.style.display = \"none\"\r\n        modal.style.display = 'none'\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showMessage);\n\n//# sourceURL=webpack://uber/./src/js/modules/showMessage.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/spinner.js":
+/*!***********************************!*\
+  !*** ./src/js/modules/spinner.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction spinner (event) {\r\n    const spinner = document.querySelector('.spinner-border')\r\n\r\n    event === 'show' ? spinner.style.display = 'block' : spinner.style.display = 'none'\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (spinner);\n\n//# sourceURL=webpack://uber/./src/js/modules/spinner.js?");
 
 /***/ })
 
