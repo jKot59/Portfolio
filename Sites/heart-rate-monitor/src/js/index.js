@@ -14,3 +14,7 @@ validate()
 mailer()
 pageUp()
 new WOW().init();
+
+window.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.footer__map').style.display = "block"
+})
