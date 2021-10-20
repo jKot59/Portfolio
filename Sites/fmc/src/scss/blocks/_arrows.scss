@@ -1,0 +1,57 @@
+.left-arrow {
+    width: 11px;
+    height: 11px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+        position: absolute;
+        content: '';
+        top: -1px;
+        left: 5px;
+        transform: rotate(45deg);
+        display: block;
+        height: 8px;
+        width: 1px;
+        background-color: #fff;
+    }
+    &::after {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        transform: rotate(-45deg);
+        content: '';
+        display: block;
+        height: 8px;
+        width: 1px;
+        background-color: #fff;
+    }
+}
+
+.right-arrow {
+    width: 11px;
+    height: 11px;
+    position: relative;
+    cursor: pointer;
+    &::before {
+        position: absolute;
+        content: '';
+        top: -1px;
+        left: 5px;
+        transform: rotate(-45deg);
+        display: block;
+        height: 8px;
+        width: 1px;
+        background-color: #fff;
+    }
+    &::after {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        transform: rotate(45deg);
+        content: '';
+        display: block;
+        height: 8px;
+        width: 1px;
+        background-color: #fff;
+    }
+}

@@ -1,17 +1,31 @@
 @import 'libs/bootstrap-reboot';
 @import 'base/variables';
 @import 'base/mixins';
+@import 'base/fonts';
 
 * {
-    // font-family: ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --main-color: #00c2f0;
+}
 .container {
     width: 1140px;
     margin: 0 auto;
 }
 
+ul {
+    list-style-type: none;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+}
 
+@import 'blocks/promo';
+@import 'blocks/buttons';
+@import 'blocks/arrows';
 @import 'base/media';
