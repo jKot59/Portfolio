@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction mailer () {\r\n    $('form').submit(function (event) {\r\n        event.preventDefault()\r\n        \r\n        $.ajax({\r\n            type:'POST',\r\n            url:'./mailer/smart.php',\r\n            data:$(this).serialize(),\r\n            \r\n        }).done(function () {\r\n            $(this).val(\"\")\r\n            $('form').trigger('reset')\r\n        })\r\n        return false\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mailer);\n\n//# sourceURL=webpack://uber/./src/js/modules/mailer.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction mailer () {\r\n    const form = document.querySelector('.contacts__form')\r\n\r\n    form.addEventListener('submit', (e) => {\r\n        e.preventDefault()\r\n\r\n        fetch('./mailer/smart.php', {\r\n            method: 'POST',\r\n            body: new FormData(form)\r\n        })\r\n    })\r\n}\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mailer);\n\n//# sourceURL=webpack://uber/./src/js/modules/mailer.js?");
 
 /***/ }),
 

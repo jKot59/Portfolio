@@ -1,17 +1,13 @@
 function mailer () {
-    $('form').submit(function (event) {
-        event.preventDefault()
-        
-        $.ajax({
-            type:'POST',
-            url:'./mailer/smart.php',
-            data:$(this).serialize(),
-            
-        }).done(function () {
-            $(this).val("")
-            $('form').trigger('reset')
+    const form = document.querySelector('.contacts__form')
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        fetch('./mailer/smart.php', {
+            method: 'POST',
+            body: new FormData(form)
         })
-        return false
     })
 }
 
