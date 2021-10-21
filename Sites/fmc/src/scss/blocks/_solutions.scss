@@ -1,0 +1,54 @@
+.solutions {
+    padding: 80px 0 60px 0;
+    min-height: 890px;
+    background: url('../img/bg/woman_bg.jpg') center (center / cover) no-repeat;
+    h2 {
+        width: 625px;
+        margin: 0 auto;
+        font-size: 30px;
+        line-height: 35px;
+        font-weight: 700;
+        color: #ffffff;
+        text-align: center;
+    }
+    &__navigation {
+        width: 843px;
+        margin: 0 auto;
+        margin-top: 25px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        height: 64px;
+        ul {
+            padding: 0 32px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        li {
+            position: relative;
+            font-size: 14px;
+            line-height: 25px;
+            font-weight: 500;
+            color: #ffffff;
+            &:not(:first-child) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -13px;
+                    left: -26px;
+                    display: block;
+                    height: 49px;
+                    width: 1px;
+                    background-color: #82817f;
+                }
+            }
+        }
+    }
+    &__slider {
+        position: relative;
+        width: 950px;
+        margin: 0 auto;
+        margin-top: 36px;
+    }
+}

@@ -37,8 +37,28 @@
     &__slider {
         position: relative;
         min-height: 700px;
-        background: url('../img/bg/first_bg.jpg') center (center / cover) no-repeat;
         overflow: hidden;
+        transition: .5s all;
+        &_slide1 {
+            background: url('../img/bg/first_bg.jpg') center (center / cover) no-repeat;
+            animation: fadeIn 1s linear;
+        }
+        &_slide2 {
+            background: rgb(18, 250, 227) center (center / cover) no-repeat;
+            animation: fadeIn 1s linear;
+        }
+        &_slide3 {
+            background: rgb(34, 152, 242) center (center / cover) no-repeat;
+            animation: fadeIn 1s linear;
+        }
+        &_slide4 {
+            background: rgb(98, 248, 90) center (center / cover) no-repeat;
+            animation: fadeIn 1s linear;
+        }
+        &_slide5 {
+            background: rgb(248, 90, 90) center (center / cover) no-repeat;
+            animation: fadeIn 1s linear;
+        }
         &-nav {
             position: absolute;
             width: 110px;
@@ -95,14 +115,6 @@
             font-weight: 700;
             text-transform: uppercase;
             color: #ffffff;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            &:hover {
-                text-decoration: none;
-                color: var(--main-color);
-            }
         }
     }
     &__title {
