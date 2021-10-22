@@ -1,14 +1,15 @@
-function slider () {
+function slider (timer) {
     const slider = document.querySelector('.promo__slider'),
           dots = slider.querySelectorAll('.promo__slider-dots li'),
           leftArrow = slider.querySelector('.left-arrow'),
-          rightArrow = slider.querySelector('.right-arrow')
+          rightArrow = slider.querySelector('.right-arrow'),
+          slides = document.querySelectorAll('.promo__slider-window li')
 
 
     let currentSlide = 0
     let intervalId
 
-    autoToggle(2000)
+    autoToggle(timer)
 
     // переключение сладов при клике по точкам
     dots.forEach( (dot, i) => {
@@ -49,9 +50,10 @@ function slider () {
         dots.forEach( (dot, i) => {
             dot.className = ''  // делаем все точки неактивные
             if(slideNumber == i) {
-                slider.className = 'promo__slider' // class which have to stay
-                slider.classList.add(`promo__slider_slide${slideNumber + 1}`) // активируем слайд
+                slides[i].classList.add('active')
                 dots[i].classList.add('active') // активируем точку
+            } else {
+                slides[i].classList.remove('active')
             }
         })
     }

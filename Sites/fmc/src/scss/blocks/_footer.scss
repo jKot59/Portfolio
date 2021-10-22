@@ -1,0 +1,42 @@
+.footer {
+    padding: 50px 0 40px 0;
+    background-color: #0082a1;
+    color: #ffffff;
+    &__grid {
+        display: grid;
+        grid-template-columns: 380px 265px 120px 115px;
+        grid-template-rows: minmax(310px, auto);
+        justify-content: space-between;
+    }
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        margin-bottom: 5px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        a {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+    }
+    &__item {
+        &-logo {
+            padding: 20px 0;
+        }
+    }
+    hr {
+        background-color: var(--main-color);
+        height: 1px;
+        margin-top: 44px;
+        margin-bottom: 36px;
+    }
+    &__copyright {
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 300;
+        text-align: center;
+    }
+}

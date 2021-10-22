@@ -1,3 +1,7 @@
 import slider from './modules/slider';
+import menu from './modules/menu';
 
-slider()
+if(window.innerWidth > 575) {
+    slider(2000)
+}
+menu()

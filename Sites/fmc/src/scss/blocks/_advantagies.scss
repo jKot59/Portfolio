@@ -1,0 +1,46 @@
+.advantagies {
+    padding: 80px 0 80px 0;
+    h2 {
+        width: 372px;
+    }
+    &__grid {
+        margin-top: 44px;
+        display: grid;
+        grid-template-columns: repeat(2, 570px);
+        grid-template-rows: repeat(3, minmax(355px, auto));
+        grid-auto-rows: 355px;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &_bg-clock {
+            background: url('../img/clock.png') center (center / cover) no-repeat;
+        }
+        &_bg-robot {
+            background: url('../img/robot.png') center (center / cover) no-repeat;
+        }
+        &_bg-globe {
+            background: url('../img/globe.png') center (center / cover) no-repeat;
+        }
+        &_bg-smartphone {
+            background: url('../img/smartphone.png') center (center / cover) no-repeat;
+        }
+        &_bg-suit {
+            background: url('../img/suit.png') center (center / cover) no-repeat;
+        }
+        &_bg-card {
+            background: url('../img/card.png') center (center / cover) no-repeat;
+        }
+    }
+    &__text {
+        padding: 40px 86px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .43);
+        font-size: 23px;
+        line-height: 26px;
+        font-weight: 500;
+        color: #ffffff;
+        text-align: center;
+    }
+}

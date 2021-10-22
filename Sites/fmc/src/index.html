@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style/style.min.css">
 </head>
 <body>
-   <section class="promo">
+   <header class="promo">
        <div class="container">
            <div class="promo__countries">
                <ul>
@@ -56,18 +56,27 @@
            </div>
         </div>
 
-        <div class="promo__slider promo__slider_slide1">
+        <div class="promo__slider">
+            <ul class="promo__slider-window">
+                <li class="active"><img src="img/bg/first_bg.jpg" alt="first-slide"></li>
+                <li><img src="img/bg/sea.jpg" alt="sea"></li>
+                <li><img src="img/bg/flower.jpg" alt="flower"></li>
+                <li><img src="img/bg/shoes.jpg" alt="shoes"></li>
+                <li><img src="img/bg/first_bg.jpg" alt="first-slide"></li>
+            </ul>
             <div class="container">
-                <nav class="promo__menu">
+                <div class="promo__menu">
                     <div class="promo__menu-logo"><img src="img/logo/logo.png" alt="logo"></div>
-                    <ul>
-                        <li><a href="#">главная</a></li>
-                        <li><a href="#">модули</a></li>
-                        <li><a href="#">отрасли</a></li>
-                        <li><a href="#">о нас</a></li>
-                        <li><a href="#">наши обязательства</a></li>
-                    </ul>
-                </nav>
+                    <nav class="promo__menu-list">
+                        <ul>
+                            <li><a href="#">главная</a></li>
+                            <li><a href="#">модули</a></li>
+                            <li><a href="#">отрасли</a></li>
+                            <li><a href="#">о нас</a></li>
+                            <li><a href="#">наши обязательства</a></li>
+                        </ul>
+                    </nav>
+                </div>
                 <h1 class="promo__title">Управляй своим бизнесом через Smartphone</h1>
                 <div class="promo__descr">PRENGI - Платформа для прозрачного управления бизнесом</div>
                 <button class="btn btn_mt40">Получить доступ</button>
@@ -87,9 +96,31 @@
                 <div class="right-arrow"></div>
             </div>
         </div>
-   </section>
 
-   <section class="benefit">
+        <div class="burger">
+            <span></span>
+        </div>
+    
+        <div class="menu">
+            <div class="menu__block">
+                <div class="menu__close">
+                    <span>&#x2716;</span>
+                </div>
+                <nav>
+                    <ul class="menu__list">
+                        <li class="menu__link"><a href="#about">главная</a></li>
+                        <li class="menu__link"><a href="#exp">модули</a></li>
+                        <li class="menu__link"><a href="#skills">отрасли</a></li>
+                        <li class="menu__link"><a href="#portfolio">о нас</a></li>
+                        <li class="menu__link"><a href="#price">наши обязательства</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu__overlay"></div>
+        </div>
+   </header>
+
+   <!-- <section class="benefit">
        <div class="container">
             <div class="benefit__row">
                 <div class="benefit__item">
@@ -111,7 +142,7 @@
             <div class="benefit__arrows">
                 <div class="first-arrow"></div>
                 <div class="second-arrow"></div>
-                <h2>С PRENGI</h2>
+                <h2 class="title title_fsz48">С PRENGI</h2>
             </div>
             <div class="benefit__row">
                 <div class="benefit__item">
@@ -131,11 +162,11 @@
                 </div>
             </div>
        </div>
-   </section>
+   </section> -->
 
-    <section class="solutions">
+    <!-- <section class="solutions">
         <div class="container">
-            <h2 class="solutions__header">Prengi предоставляет экспертные решения для Вашей отрасли</h2>
+            <h2 class="title title_white">Prengi предоставляет экспертные решения для Вашей отрасли</h2>
             <div class="solutions__navigation">
                 <ul>
                     <li><a href="#">Prengi Production</a></li>
@@ -154,7 +185,106 @@
                 <div class="right-arrow right-arrow_wide-blue"></div>
             </div>
         </div>
-    </section>
+    </section> -->
+
+    <!-- <section class="advantagies">
+        <div class="container">
+            <h2 class="title">Преимущества Prengi для Вашей отрасли</h2>
+            <div class="advantagies__grid">
+                <div class="advantagies__item advantagies__item_bg-clock">
+                    <div class="advantagies__text">Возможность внедрения и тестирования в реальном времени</div>
+                </div>
+                <div class="advantagies__item advantagies__item_bg-robot">
+                    <div class="advantagies__text">Система “Intellect”, учет уровня доступов</div>
+                </div>
+                <div class="advantagies__item advantagies__item_bg-globe">
+                    <div class="advantagies__text">Возможность использовать из любой точки мира с любого устройства</div>
+                </div>
+                <div class="advantagies__item advantagies__item_bg-smartphone">
+                    <div class="advantagies__text">Нет необходимости установки и стационарной работы программиста</div>
+                </div>
+                <div class="advantagies__item advantagies__item_bg-suit">
+                    <div class="advantagies__text">“Живые” <br> бизнес-процессы</div>
+                </div>
+                <div class="advantagies__item advantagies__item_bg-card">
+                    <div class="advantagies__text">Никаких предоплат, оплата после старта</div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <section class="data-base">
+        <h2 class="title title_white">Варианты развертывания Ваших данных</h2>
+        <div class="data-base__grid">
+            <div class="data-base__item data-base__item_bg-cloud">
+                <div class="data-base__item-title">Облачное хранилище</div>
+                <div class="data-base__item-descr">Это выделенное пользователю пространство на жестком диске сервера, находящегося в Интернете.</div>
+            </div>
+            <div class="data-base__item data-base__item_bg-server">
+                <div class="data-base__item-title">Размещение не сервере</div>
+                <div class="data-base__item-descr">Услуга аренды пространства в центре обработки данных (колокация серверов) предназначена для клиентов</div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- <div class="feedback">
+        <div class="feedback__icon"><img src="img/touch.png" alt="touch"></div>
+        <div class="feedback__descr">Приступить очень просто! <br> Нужно получить доступ и начать работу!</div>
+        <button class="btn">связаться с нами</button>
+    </div> -->
+
+    <!-- <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__item">
+                    <div class="footer__item-title">О компании</div>
+                    <div class="footer__item-logo"><img src="img/logo/logo_2.png" alt="logo2"></div>
+                    <p>Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
+                    <p>Управление задачами</p>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-title">Модули</div>
+                    <ul>
+                        <li><a href="#">Обслуживание</a></li>
+                        <li><a href="#">Паспорт объекта</a></li>
+                        <li><a href="#">Автоматизация бизнес процессов (BPM)</a></li>
+                        <li><a href="#">Проектное управление (РРМ)</a></li>
+                        <li><a href="#">Управление подрядчиками</a></li>
+                        <li><a href="#">Персональный дашборд</a></li>
+                        <li><a href="#">Управление задачами</a></li>
+                        <li><a href="#">Управление алгоритмами</a></li>
+                        <li><a href="#">Управление качеством</a></li>
+                        <li><a href="#">Склад</a></li>
+                        <li><a href="#">Service desk</a></li>
+                        <li><a href="#">Календарь</a></li>
+                        <li><a href=""><a href="#">Prengi market</a></a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-title">Отрасли</div>
+                    <ul>
+                        <li><a href="#">Промышленность</a></li>
+                        <li><a href="#">Ритейл</a></li>
+                        <li><a href="#">Фасилити</a></li>
+                        <li><a href="#">Логистика</a></li>
+                        <li><a href="#">IT</a></li>
+                        <li><a href="#">HR</a></li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <div class="footer__item-title">О нас</div>
+                    <ul>
+                        <li><a href="#">История</a></li>
+                        <li><a href="#">Наши отношения</a></li>
+                        <li><a href="#">Команда</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="footer__copyright">© Prengi Ink. 2008-2017 Все права защищены.</div>
+        </div>
+    </footer> -->
     <script src="js/bundle.js"></script>
 </body>
 </html>

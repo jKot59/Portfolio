@@ -1,0 +1,15 @@
+.title {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+    color: #393939;
+    margin: 0 auto;
+    text-align: center;
+    &_white {
+        color: #fff;
+        width: 625px;
+    }
+    &_fsz48 {
+        font-size: 48px;
+    }
+}
