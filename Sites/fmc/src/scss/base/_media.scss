@@ -12,6 +12,16 @@
             }
         }
     }
+    .benefit {
+        &__row {
+            grid-template-columns: repeat(auto-fill,300px);
+        }
+    }
+    .first-arrow, .second-arrow {
+        &::before {
+            left: calc(45% - 3px);
+        }
+    }
 
 }
 @media (max-width: 991px) {
@@ -21,6 +31,24 @@
     .promo {
         &__countries {
             display: none;
+        }
+    }
+    .benefit {
+        &__row {
+            grid-template-columns: repeat(auto-fill,230px);
+            column-gap: 10px;
+        }
+        &__item {
+            
+        }
+        &__text {
+            width: 100%;
+            font-size: 15px;
+        }
+        .first-arrow, .second-arrow {
+            &::before {
+                left: calc(42% - 3px);
+            }
         }
     }
 }
@@ -67,6 +95,20 @@
     .burger {
         display: flex;
     }
+    .benefit {
+        &__item {
+            &_last, &_first {
+                grid-column: 1 / 3;
+                width: 230px;
+                justify-self: center;
+            }
+        }
+        .first-arrow, .second-arrow {
+            &::before {
+                left: calc(38% - 3px);
+            }
+        }
+    }
 }
 @media (max-width: 575px) {
     .container {
@@ -104,6 +146,24 @@
                 font-size: 16px;
                 line-height: 35px;
                 text-transform: uppercase;
+            }
+        }
+    }
+    .benefit {
+        &__row {
+            grid-template-columns: 230px;
+        }
+        &__item {
+            &_first {
+                grid-column: 1;
+            }
+            &_last {
+                grid-column: 1;
+            }
+        }
+        .first-arrow, .second-arrow {
+            &::after {
+                left: calc(67% - 3px);
             }
         }
     }
