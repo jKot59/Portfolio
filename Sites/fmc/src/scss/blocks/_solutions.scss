@@ -1,6 +1,7 @@
 .solutions {
+    position: relative;
     padding: 80px 0 60px 0;
-    min-height: 890px;
+    min-height: 690px;
     background: url('../img/bg/woman_bg.jpg') center (center / cover) no-repeat;
     &__navigation {
         width: 843px;
@@ -10,14 +11,21 @@
         align-items: center;
         border: 1px solid #ffffff;
         border-radius: 4px;
-        height: 64px;
+        height: fit-content;
         ul {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 62px;
+            grid-auto-rows: 62px;
+            height: 100%;
             padding: 0 32px;
             width: 100%;
             justify-content: space-between;
+            align-items: center;
         }
         li {
             position: relative;
+            height: 100%;
             font-size: 14px;
             line-height: 25px;
             font-weight: 500;
@@ -26,14 +34,20 @@
                 &::after {
                     content: "";
                     position: absolute;
-                    top: -13px;
-                    left: -26px;
+                    top: 6px;
+                    left: 0;
                     display: block;
-                    height: 49px;
+                    height: 50px;
                     width: 1px;
                     background-color: #82817f;
                 }
             }
+        }
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
     }
     &__slider {
@@ -41,5 +55,28 @@
         width: 950px;
         margin: 0 auto;
         margin-top: 36px;
+        background: url('../img/laptop.png') center (center / cover) no-repeat;
+        height: 560px;
+        z-index: 2;
+        &-window {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -31%);
+            display: flex;
+            width: 699px;
+            height: 439px;
+            overflow: hidden;
+            img {
+                position: absolute;
+                display: none;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .active {
+        display: block;
     }
 }

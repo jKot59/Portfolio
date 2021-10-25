@@ -32,7 +32,7 @@ function slider (timer) {
         
     })
     rightArrow.addEventListener('click', () => {
-        if(currentSlide < 4) {
+        if(currentSlide < slides.length - 1) {
             ++currentSlide
             showSLide(currentSlide)
             clearInterval(intervalId)
@@ -41,7 +41,7 @@ function slider (timer) {
 
     function autoToggle (time) {
         intervalId = setInterval(() => {
-            currentSlide < 4 ? ++currentSlide : currentSlide = 0
+            currentSlide < slides.length - 1 ? ++currentSlide : currentSlide = 0
             showSLide(currentSlide)
         }, time)
     }
