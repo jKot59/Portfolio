@@ -1,3 +1,5 @@
+import lazyload from "./lazyload"
+
 function sliderSolutions () {
     const leftArrow = document.querySelector('.solutions__slider .left-arrow'),
           rightArrow = document.querySelector('.solutions__slider .right-arrow'),
@@ -50,6 +52,7 @@ function sliderSolutions () {
         items.forEach( (item, i) => {
             if(i == currentSlide) {
                 item.classList.add('active')
+                lazyload(item)
             } else {
                 item.classList.remove('active')
             }

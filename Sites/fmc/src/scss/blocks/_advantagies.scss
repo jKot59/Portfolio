@@ -15,22 +15,22 @@
         align-items: center;
         justify-content: center;
         &_bg-clock {
-            background: url('../img/clock.png') center (center / cover) no-repeat;
+            background: url('../img/clock.jpg') center (center / cover) no-repeat;
         }
         &_bg-robot {
-            background: url('../img/robot.png') center (center / cover) no-repeat;
+            background: url('../img/robot.jpg') center (center / cover) no-repeat;
         }
         &_bg-globe {
-            background: url('../img/globe.png') center (center / cover) no-repeat;
+            background: url('../img/globe.jpg') center (center / cover) no-repeat;
         }
         &_bg-smartphone {
-            background: url('../img/smartphone.png') center (center / cover) no-repeat;
+            background: url('../img/smartphone.jpg') center (center / cover) no-repeat;
         }
         &_bg-suit {
-            background: url('../img/suit.png') center (center / cover) no-repeat;
+            background: url('../img/suit.jpg') center (center / cover) no-repeat;
         }
         &_bg-card {
-            background: url('../img/card.png') center (center / cover) no-repeat;
+            background: url('../img/card.jpg') center (center / cover) no-repeat;
         }
     }
     &__text {

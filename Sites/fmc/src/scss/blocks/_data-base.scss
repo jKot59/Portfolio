@@ -23,7 +23,7 @@
             position: relative;
             padding-right: 83px;
             align-items: end;
-            background: url('../img/cloud.png') center (center / cover) no-repeat;
+            background: url('../img/cloud.jpg') center (center / cover) no-repeat;
             text-align: right;
             &::before {
                 content: '';
@@ -39,7 +39,7 @@
         &_bg-server {
             position: relative;
             padding-left: 83px;
-            background: url('../img/server.png') center (center / cover) no-repeat;
+            background: url('../img/server.jpg') center (center / cover) no-repeat;
             &::before {
                 content: '';
                 position: absolute;
