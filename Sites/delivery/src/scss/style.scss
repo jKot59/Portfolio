@@ -1,9 +1,11 @@
 @import 'libs/bootstrap-reboot';
 @import 'base/variables';
 @import 'base/mixins';
+@import 'base/fonts';
 
 * {
-    // font-family: ;
+    font-family: 'Roboto';
+    font-weight: 500;
     margin: 0;
     padding: 0;
 }
@@ -13,5 +15,19 @@
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+    &:hover {
+        border-bottom: 1px solid $main-color;
+        padding-bottom: 5px;
+        color: $main-color;
+    }
+}
 
+@import 'blocks/header';
+@import 'blocks/main';
+@import 'blocks/footer';
+@import 'blocks/buttons';
+@import 'blocks/call-me';
 @import 'base/media';

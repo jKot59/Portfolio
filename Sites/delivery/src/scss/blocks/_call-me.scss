@@ -1,0 +1,29 @@
+.call-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 18px;
+    &__subtitle {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: right;
+    }
+    &__phone {
+        text-align: right;
+        font-size: 19px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+    button {
+        grid-row: 1 / 3;
+        grid-column: 2;
+    }
+    a {
+        &:hover {
+            border: none;
+            padding: 0;
+        }
+    }
+}
