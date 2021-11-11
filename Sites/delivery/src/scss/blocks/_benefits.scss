@@ -4,23 +4,34 @@
     min-height: 590px;
     background-color: #f3f3f3;
     &__grid {
+        margin-top: 32px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-rows: repeat(4,minmax(65px, auto));
         grid-auto-rows: auto;
         justify-content: center;
+        column-gap: 48px;
+        row-gap: 35px;
     }
     &__item {
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: 68px auto;
+        column-gap: 20px;
         &-img {
         }
         &-title {
             color: $main-color;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 700;
         }
-        &-descr {
+        &-text {
+            margin-top: 5px;
             grid-column: 2;
             grid-row: 1;
+            font-size: 14px;
+            font-weight: 500;
+            color: #3a3a3a;
         }
     }
 }
