@@ -1,0 +1,34 @@
+.agent {
+    padding-top: 58px;
+    padding-bottom: 75px;
+    background: url('../img/bg/second_bg.jpg') center (center / cover) no-repeat;
+    &__descr {
+        width: 985px;
+        margin: 0 auto;
+        margin-top: 12px;
+        font-size: 19px;
+        line-height: 27px;
+        font-weight: 300;
+        color: #ffffff;
+        text-align: center;
+    }
+    &__img {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 102px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            width: 102px;
+            height: 102px;
+            border: 1px solid #ffffff;
+            border-radius: 100%;
+        }
+    }
+}

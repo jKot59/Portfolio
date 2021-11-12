@@ -6,4 +6,11 @@
     color: #2e2e2e;
     text-align: center;
     margin-bottom: 0;
+    &-white {
+        text-transform: none;
+        color: #fff;
+    }
+    &-mt15 {
+        margin-top: 15px;
+    }
 }

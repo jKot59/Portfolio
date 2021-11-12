@@ -142,12 +142,21 @@
             }
         }
     }
+    .our-work {
+        .subtitle {
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
 }
 @media (max-width: 767px) {
     .container {
         max-width: 540px;
     }
 
+    .title {
+        font-size: 22px;
+    }
     .header {
         padding-top: 50px;
         &__title {
@@ -259,6 +268,28 @@
             }
         }
     }
+    .our-work {
+        .subtitle {
+            font-size: 13px;
+            line-height: 16px;
+        }
+        &__grid {
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+        &__item {
+            &-descr {
+                margin-top: 15px;
+            }
+            &-img {
+                display: flex;
+                justify-content: center;
+                img {
+                    width: auto;
+                }
+            }
+        }
+    }
 }
 @media (max-width: 575px) {
     .container {
@@ -329,6 +360,15 @@
             }
             &-text {
                 font-size: 13px;
+            }
+        }
+    }
+    .our-work {
+        &__item {
+            &-img {
+                img {
+                    width: 300px;
+                }
             }
         }
     }
