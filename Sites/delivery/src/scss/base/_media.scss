@@ -39,6 +39,12 @@
             }
         }
     }
+    .agent {
+        &__descr {
+            width: auto;
+
+        }
+    }
 }
 @media (max-width: 991px) {
     a {
@@ -370,6 +376,13 @@
                     width: 300px;
                 }
             }
+        }
+    }
+    .agent {
+        &__descr {
+            width: 300px;
+            font-size: 14px;
+            line-height: 20px;
         }
     }
 }
