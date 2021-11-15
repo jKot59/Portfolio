@@ -1,8 +1,12 @@
 .subtitle {
+    max-width: 880px;
     font-size: 21px;
     line-height: 24px;
     font-weight: 300;
     color: #2e2e2e;
     text-align: center;
     margin: 0 auto;
+    p {
+        font-weight: 300;
+    }
 }

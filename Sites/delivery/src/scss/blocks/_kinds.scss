@@ -1,0 +1,67 @@
+.kinds {
+    padding: 55px 0;
+
+    &__grid {
+        padding-top: 34px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 261px);
+        column-gap: 30px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border: 1px solid #e9e9e9;
+        padding-bottom: 26px;
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 61px;
+            background: #25333c;
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+        &-img {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-delivery-time {
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+        }
+        &-price {
+            font-size: 28px;
+            line-height: 30px;
+            text-transform: none;
+            color: #ec644b;
+            text-align: center;
+        }
+        &-descr {
+            margin-top: 19px;
+            padding: 0 13px;
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 300;
+            color: black;
+            text-align: center;
+        }
+        .button {
+            display: block;
+            // margin: 0 auto;
+            margin-top: 25px;
+            align-self: center;
+            justify-content: flex-end;
+        }
+    }
+}
