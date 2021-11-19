@@ -1,5 +1,6 @@
 .consultation {
     padding-bottom: 58px;
+    min-height: 350px;
     &__form {
         display: flex;
         align-items: center;
@@ -48,12 +49,5 @@
     .button {
         width: 180px;
     }
-    input {
-        padding: 0 30px;
-        width: 268px;
-        height: 45px;
-        border-radius: 40px;
-        border: 1px solid #898989;
-        font-size: 14px;
-    }
+
 }

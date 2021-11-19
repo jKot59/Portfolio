@@ -163,6 +163,17 @@
             row-gap: 15px;
         }
     }
+    .form {
+        padding-top: 15px;
+        input {
+            padding: 0 30px;
+            width: 210px;
+            height: 45px;
+            border-radius: 40px;
+            border: 1px solid #898989;
+            font-size: 14px;
+        }
+    }
 }
 @media (max-width: 767px) {
     .container {
@@ -304,6 +315,18 @@
                 }
             }
         }
+    }
+    .consultation {
+        &__form {
+            width: 300px;
+            margin: 70px auto 0 auto;
+        }
+    }
+    .form {
+        grid-template-columns: 210px;
+        grid-template-rows: auto;
+        row-gap: 10px;
+        padding: 60px;
     }
 }
 @media (max-width: 575px) {
