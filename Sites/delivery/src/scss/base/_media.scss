@@ -45,6 +45,11 @@
 
         }
     }
+    .kinds {
+        &__grid {
+            column-gap: 15px;
+        }
+    }
 }
 @media (max-width: 991px) {
     a {
@@ -148,10 +153,14 @@
             }
         }
     }
-    .our-work {
-        .subtitle {
-            font-size: 17px;
-            line-height: 20px;
+    .subtitle {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .kinds {
+        &__grid {
+            grid-template-columns: repeat(auto-fill, 261px);
+            row-gap: 15px;
         }
     }
 }
@@ -274,11 +283,11 @@
             }
         }
     }
+    .subtitle {
+        font-size: 13px;
+        line-height: 16px;
+    }
     .our-work {
-        .subtitle {
-            font-size: 13px;
-            line-height: 16px;
-        }
         &__grid {
             grid-template-columns: 1fr;
             row-gap: 30px;

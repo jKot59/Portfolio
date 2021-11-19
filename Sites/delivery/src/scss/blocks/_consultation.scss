@@ -1,0 +1,59 @@
+.consultation {
+    padding-bottom: 58px;
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 166px;
+        position: relative;
+        margin-top: 70px;
+        border: 1px solid #898989;
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        width: 120px;
+        height: 102px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+
+        img {
+            object-fit: none;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 102px;
+            height: 102px;
+            border: 1px solid $main-color;
+            border-radius: 100%;
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 200px;
+        padding: 0 10px;
+        background-color: #fff;
+
+    }
+    .button {
+        width: 180px;
+    }
+    input {
+        padding: 0 30px;
+        width: 268px;
+        height: 45px;
+        border-radius: 40px;
+        border: 1px solid #898989;
+        font-size: 14px;
+    }
+}
